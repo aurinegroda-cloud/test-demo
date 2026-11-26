@@ -8,18 +8,19 @@
 <link rel="icon" href="icon.svg">
 <title>Gym Progreso</title>
 <style>
-:root{--bg:#0f172a;--card:#1e293b;--card2:#273449;--txt:#f1f5f9;--mut:#94a3b8;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;--line:#334155}
+:root{color-scheme:dark;--bg:#0f172a;--card:#1e293b;--card2:#273449;--txt:#f1f5f9;--mut:#94a3b8;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;--line:#334155}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
-header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;gap:10px}
+body::before{content:'';position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:10px}
 header h1{font-size:18px;margin:0;flex:1}
-main{max-width:720px;margin:0 auto;padding:16px}
+main{max-width:720px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
 button{font:inherit;color:inherit;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer}
 button.pri{background:var(--ok);color:#052e16;border-color:var(--ok);font-weight:700}
 button.dng{color:var(--bad)}
 button.sm{padding:6px 10px;font-size:14px}
 button:disabled{opacity:.4}
-input,select{font:inherit;color:var(--txt);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;width:100%}
+input,select,textarea{font:inherit;color:var(--txt);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;width:100%}
 input:focus{outline:2px solid var(--ok)}
 .card{background:var(--card);border-radius:14px;padding:14px;margin-bottom:12px}
 .row{display:flex;gap:8px;align-items:center}
@@ -49,6 +50,11 @@ th{color:var(--mut);font-weight:600}
 .big{display:block;width:100%;padding:18px;font-size:18px;margin-bottom:12px}
 .empty{text-align:center;color:var(--mut);padding:24px}
 .printonly{display:none}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px;z-index:20}
+.modal .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;max-width:440px;width:100%}
+.modal p{margin:0 0 12px}
+.modal .row{margin-top:12px}
+textarea{width:100%;font-family:ui-monospace,monospace;font-size:13px}
 @media print{
   :root{--bg:#fff;--card:#fff;--card2:#f1f5f9;--txt:#000;--mut:#555;--line:#ccc}
   header,.tabs,.noprint{display:none!important}
@@ -78,7 +84,7 @@ function cargar(){
   return { students: [] };
 }
 let db = cargar();
-function guardar(){ try{ localStorage.setItem(KEY, JSON.stringify(db)); }catch(e){ alert('No se pudo guardar en este dispositivo.'); } }
+function guardar(){ try{ localStorage.setItem(KEY, JSON.stringify(db)); }catch(e){ avisar('No se pudo guardar en este dispositivo.'); } }
 const uid = () => Math.random().toString(36).slice(2,10);
 const k = (w,d) => w+'-'+d;
 const norm = s => (s||'').trim().toLowerCase();
@@ -112,6 +118,34 @@ const $app = document.getElementById('app');
 const $title = document.getElementById('title');
 const $back = document.getElementById('back');
 const $exit = document.getElementById('exit');
+
+/* ====== Ventanas dentro de la página ====== */
+function modal(...contenido){
+  const m = h('div',{class:'modal'},h('div',{class:'box'},contenido));
+  m.addEventListener('click',e=>{ if(e.target===m) m.remove(); });
+  document.body.append(m); return m;
+}
+function avisar(msg){ const m = modal(h('p',{},msg),h('button',{class:'pri',style:'width:100%',onclick:()=>m.remove()},'Entendido')); }
+function confirmar(msg,fn){
+  const m = modal(h('p',{},msg),h('div',{class:'row'},h('button',{onclick:()=>m.remove()},'Cancelar'),h('button',{class:'pri',onclick:()=>{m.remove();fn();}},'Aceptar')));
+}
+function pedir(msg,valor,fn){
+  const i = h('input',{value:valor||'',inputmode:'numeric',maxlength:'4',autocomplete:'off'});
+  const ok = () => { m.remove(); fn(i.value); };
+  i.addEventListener('keydown',e=>{ if(e.key==='Enter') ok(); });
+  const m = modal(h('p',{},msg),i,h('div',{class:'row'},h('button',{onclick:()=>m.remove()},'Cancelar'),h('button',{class:'pri',onclick:ok},'Aceptar')));
+  i.focus();
+}
+function verTexto(titulo,texto){
+  const t = h('textarea',{rows:'8',readonly:true}); t.value = texto;
+  const estado = h('div',{class:'mut',style:'margin-top:8px'});
+  const m = modal(h('p',{},h('b',{},titulo)),t,estado,h('div',{class:'row'},
+    h('button',{onclick:()=>m.remove()},'Cerrar'),
+    h('button',{class:'pri',onclick:()=>{
+      const sel = () => { t.focus(); t.select(); estado.textContent = 'Texto seleccionado: cópialo con el menú del móvil.'; };
+      try{ navigator.clipboard.writeText(texto).then(()=>{estado.textContent='Copiado ✓';}).catch(sel); }catch(e){ sel(); }
+    }},'Copiar')));
+}
 
 /* ====== Estado de pantalla ====== */
 let ui = { role:null, sid:null, tab:'programa', w:1, d:1 };
@@ -181,22 +215,22 @@ function vistaAlumnos(){
   $app.append(h('div',{class:'card noprint'},
     h('div',{class:'mut',style:'margin-bottom:8px'},'Copia de seguridad (los datos se guardan en este dispositivo)'),
     h('div',{class:'row'},
-      h('button',{onclick:exportar},'Exportar'),
-      h('button',{onclick:()=>fileIn.click()},'Importar')
+      h('button',{onclick:exportar},'Copiar copia'),
+      h('button',{onclick:importar},'Restaurar')
     )
   ));
 }
-const fileIn = h('input',{type:'file',accept:'application/json',style:'display:none',onchange:e=>{
-  const f = e.target.files[0]; if(!f) return;
-  f.text().then(t=>{ const d = JSON.parse(t); if(!d.students) throw 0; if(confirm('Esto reemplaza los datos actuales. ¿Continuar?')){ db=d; guardar(); render(); } }).catch(()=>alert('Archivo no válido.'));
-  e.target.value='';
-}});
-document.body.append(fileIn);
-function descargar(nombre, contenido, tipo){
-  const a = h('a',{href:URL.createObjectURL(new Blob([contenido],{type:tipo})),download:nombre});
-  document.body.append(a); a.click(); a.remove();
+function exportar(){ verTexto('Copia de seguridad: copia este texto y guárdalo (notas, correo...)', JSON.stringify(db)); }
+function importar(){
+  const t = h('textarea',{rows:'8',placeholder:'Pega aquí la copia de seguridad'});
+  const err = h('div',{class:'down',style:'margin-top:8px'});
+  const m = modal(h('p',{},h('b',{},'Restaurar copia')),t,err,h('p',{class:'mut',style:'margin-top:8px'},'Esto reemplaza los datos actuales.'),h('div',{class:'row'},
+    h('button',{onclick:()=>m.remove()},'Cancelar'),
+    h('button',{class:'pri',onclick:()=>{
+      try{ const d = JSON.parse(t.value); if(!Array.isArray(d.students)) throw 0; db = d; guardar(); m.remove(); render(); }
+      catch(e){ err.textContent = 'El texto no es una copia válida.'; }
+    }},'Restaurar')));
 }
-function exportar(){ descargar('gym-progreso-'+new Date().toISOString().slice(0,10)+'.json', JSON.stringify(db,null,1),'application/json'); }
 
 /* ====== Entrenador: detalle de alumno ====== */
 function vistaAlumno(s){
@@ -228,12 +262,11 @@ function vistaPrograma(s){
     card.append(h('div',{class:'row',style:'margin-bottom:8px'},h('span',{class:'fix mut',style:'width:18px'},i+1),n,t));
   });
   $app.append(card);
-  const copiar = (dest,txt) => {
-    if(!confirm(txt)) return;
+  const copiar = (dest,txt) => confirmar(txt, () => {
     const base = JSON.stringify(prog);
     for(const [w,d] of dest) s.program[k(w,d)] = JSON.parse(base);
     guardar(); render();
-  };
+  });
   $app.append(h('div',{class:'card'},
     h('div',{class:'mut',style:'margin-bottom:8px'},'Copiar este día (para no escribir todo)'),
     h('div',{class:'row'},
@@ -242,19 +275,20 @@ function vistaPrograma(s){
     ),
     h('div',{class:'row',style:'margin-top:8px'},
       h('button',{onclick:()=>copiarSemana(s)},'Copiar semana '+ui.w+' → todas'),
-      h('button',{class:'dng',onclick:()=>{ if(confirm('¿Vaciar los 6 ejercicios de este día?')){ s.program[k(ui.w,ui.d)]=null; progDia(s,ui.w,ui.d); guardar(); render(); } }},'Vaciar día')
+      h('button',{class:'dng',onclick:()=>confirmar('¿Vaciar los 6 ejercicios de este día?',()=>{ s.program[k(ui.w,ui.d)]=null; progDia(s,ui.w,ui.d); guardar(); render(); })},'Vaciar día')
     )
   ));
   $app.append(h('div',{class:'card noprint'},
-    h('button',{class:'dng',onclick:()=>{ if(confirm('¿Eliminar a '+s.name+' y todo su historial?')){ db.students=db.students.filter(x=>x.id!==s.id); guardar(); go({sid:null}); } }},'Eliminar alumno'),
+    h('button',{class:'dng',onclick:()=>confirmar('¿Eliminar a '+s.name+' y todo su historial?',()=>{ db.students=db.students.filter(x=>x.id!==s.id); guardar(); go({sid:null}); })},'Eliminar alumno'),
     h('div',{class:'mut',style:'margin-top:8px'},'PIN: '+(s.pin||'sin PIN')+' · ',
-      h('a',{href:'#',style:'color:var(--ok)',onclick:e=>{e.preventDefault();const p=prompt('Nuevo PIN de 4 dígitos (vacío = sin PIN)',s.pin);if(p!==null){s.pin=p.replace(/\D/g,'').slice(0,4);guardar();render();}}},'cambiar'))
+      h('a',{href:'#',style:'color:var(--ok)',onclick:e=>{e.preventDefault();pedir('Nuevo PIN de 4 dígitos (vacío = sin PIN)',s.pin,p=>{s.pin=p.replace(/\D/g,'').slice(0,4);guardar();render();});}},'cambiar'))
   ));
 }
 function copiarSemana(s){
-  if(!confirm('¿Copiar los ejercicios de la semana '+ui.w+' a las otras 3 semanas?')) return;
-  for(const w of [1,2,3,4]) if(w!==ui.w) for(let d=1;d<=5;d++) s.program[k(w,d)] = JSON.parse(JSON.stringify(progDia(s,ui.w,d)));
-  guardar(); render();
+  confirmar('¿Copiar los ejercicios de la semana '+ui.w+' a las otras 3 semanas?',()=>{
+    for(const w of [1,2,3,4]) if(w!==ui.w) for(let d=1;d<=5;d++) s.program[k(w,d)] = JSON.parse(JSON.stringify(progDia(s,ui.w,d)));
+    guardar(); render();
+  });
 }
 
 /* ====== Registro (alumno / entrenador) ====== */
@@ -387,8 +421,7 @@ function vistaInforme(s){
   ));
 
   $app.append(h('div',{class:'row noprint'},
-    h('button',{class:'pri',onclick:()=>window.print()},'Imprimir / PDF'),
-    h('button',{onclick:()=>csv(s,filas)},'Descargar CSV')
+    h('button',{class:'pri',onclick:()=>csv(s,filas)},'Copiar informe para Excel')
   ));
 }
 function csv(s,filas){
@@ -398,7 +431,7 @@ function csv(s,filas){
     p.forEach((e,i)=>seriesValidas(l[i]).forEach((x,j)=>rows.push([s.name,w,DIAS[d-1],e.name,j+1,x.reps,x.kg])));
   }
   const txt = rows.map(r=>r.map(c=>'"'+String(c??'').replace(/"/g,'""')+'"').join(';')).join('\n');
-  descargar('informe-'+s.name.replace(/\W+/g,'_')+'.csv','﻿'+txt,'text/csv');
+  verTexto('Informe de '+s.name+' (CSV: pégalo en Excel o Google Sheets)',txt);
 }
 
 /* ====== Alumno: elegir nombre ====== */
@@ -406,8 +439,8 @@ function vistaElegir(){
   if(!db.students.length){ $app.append(h('div',{class:'empty'},'Tu entrenador aún no ha creado tu perfil.')); return; }
   for(const s of db.students){
     $app.append(h('button',{class:'big',onclick:()=>{
-      if(s.pin){ const p = prompt('PIN de '+s.name); if(p!==s.pin) return alert('PIN incorrecto'); }
-      go({sid:s.id,w:ui.w||1,d:ui.d||1});
+      const entrar = () => go({sid:s.id,w:ui.w||1,d:ui.d||1});
+      if(s.pin) pedir('PIN de '+s.name,'',p=>p===s.pin?entrar():avisar('PIN incorrecto')); else entrar();
     }},s.name));
   }
 }
