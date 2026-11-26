@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg">
+<title>Gym Progreso</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--card2:#273449;--txt:#f1f5f9;--mut:#94a3b8;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;--line:#334155}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;gap:10px}
+header h1{font-size:18px;margin:0;flex:1}
+main{max-width:720px;margin:0 auto;padding:16px}
+button{font:inherit;color:inherit;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer}
+button.pri{background:var(--ok);color:#052e16;border-color:var(--ok);font-weight:700}
+button.dng{color:var(--bad)}
+button.sm{padding:6px 10px;font-size:14px}
+button:disabled{opacity:.4}
+input,select{font:inherit;color:var(--txt);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;width:100%}
+input:focus{outline:2px solid var(--ok)}
+.card{background:var(--card);border-radius:14px;padding:14px;margin-bottom:12px}
+.row{display:flex;gap:8px;align-items:center}
+.row>*{flex:1}.row>.fix{flex:none}
+.mut{color:var(--mut);font-size:14px}
+.tabs{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto}
+.tabs button{flex:1;white-space:nowrap}
+.tabs button.on{background:var(--ok);color:#052e16;border-color:var(--ok);font-weight:700}
+.pills{display:flex;gap:6px;margin-bottom:10px}
+.pills button{flex:1;padding:8px 0}
+.pills button.on{background:var(--txt);color:var(--bg);font-weight:700}
+.pills button.done{border-color:var(--ok)}
+.set{display:grid;grid-template-columns:28px 1fr 1fr 40px;gap:8px;align-items:center;margin-top:8px}
+.set .n{color:var(--mut);text-align:center}
+.set input{text-align:center}
+.hint{background:var(--card2);border-radius:8px;padding:6px 10px;margin:6px 0;font-size:13px;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--mut);font-weight:600}
+.up{color:var(--ok)}.down{color:var(--bad)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}
+.stat{background:var(--card);border-radius:14px;padding:12px}
+.stat b{display:block;font-size:24px}
+.bar{height:8px;border-radius:4px;background:var(--bg);overflow:hidden;margin-top:6px}
+.bar>i{display:block;height:100%;background:var(--ok)}
+.big{display:block;width:100%;padding:18px;font-size:18px;margin-bottom:12px}
+.empty{text-align:center;color:var(--mut);padding:24px}
+.printonly{display:none}
+@media print{
+  :root{--bg:#fff;--card:#fff;--card2:#f1f5f9;--txt:#000;--mut:#555;--line:#ccc}
+  header,.tabs,.noprint{display:none!important}
+  .printonly{display:block}
+  .card,.stat{border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<header>
+  <button id="back" class="sm" style="display:none">←</button>
+  <h1 id="title">Gym Progreso</h1>
+  <button id="exit" class="sm" style="display:none">Salir</button>
+</header>
+<main id="app"></main>
+<datalist id="ejercicios"></datalist>
+
+<script>
+'use strict';
+/* ====== Datos ====== */
+const DIAS = ['Lunes','Martes','Miércoles','Jueves','Viernes'];
+const KEY = 'gym-progreso-v1';
+const SUGERENCIAS = ['Sentadilla','Prensa de piernas','Peso muerto rumano','Zancadas','Extensión de cuádriceps','Curl femoral','Elevación de talones','Press de banca','Press inclinado con mancuernas','Aperturas','Fondos','Press militar','Elevaciones laterales','Jalón al pecho','Remo con barra','Remo en polea','Dominadas','Curl de bíceps','Tríceps en polea','Press francés','Plancha','Abdominales','Hip thrust','Face pull'];
+
+function cargar(){
+  try{ const d = JSON.parse(localStorage.getItem(KEY)); if(d && d.students) return d; }catch(e){}
+  return { students: [] };
+}
+let db = cargar();
+function guardar(){ try{ localStorage.setItem(KEY, JSON.stringify(db)); }catch(e){ alert('No se pudo guardar en este dispositivo.'); } }
+const uid = () => Math.random().toString(36).slice(2,10);
+const k = (w,d) => w+'-'+d;
+const norm = s => (s||'').trim().toLowerCase();
+const num = v => { const n = parseFloat(String(v).replace(',','.')); return isFinite(n) ? n : 0; };
+const fmt = n => (Math.round(n*10)/10).toLocaleString('es-ES');
+
+function nuevoAlumno(name, pin){
+  return { id: uid(), name, pin: pin||'', program:{}, logs:{} };
+}
+function progDia(s,w,d){
+  const key = k(w,d);
+  if(!s.program[key]) s.program[key] = Array.from({length:6},()=>({name:'',target:''}));
+  return s.program[key];
+}
+function logDia(s,w,d){ const key=k(w,d); if(!s.logs[key]) s.logs[key] = {}; return s.logs[key]; }
+function seriesDe(s,w,d,i){ const l = logDia(s,w,d); if(!l[i]) l[i] = []; return l[i]; }
+
+/* ====== Helpers de UI ====== */
+function h(tag, attrs, ...kids){
+  const el = document.createElement(tag);
+  for(const [a,v] of Object.entries(attrs||{})){
+    if(a==='class') el.className = v;
+    else if(a.startsWith('on')) el.addEventListener(a.slice(2), v);
+    else if(v===true) el.setAttribute(a,'');
+    else if(v!==false && v!=null) el.setAttribute(a,v);
+  }
+  for(const c of kids.flat()){ if(c==null||c===false) continue; el.append(c.nodeType? c : document.createTextNode(c)); }
+  return el;
+}
+const $app = document.getElementById('app');
+const $title = document.getElementById('title');
+const $back = document.getElementById('back');
+const $exit = document.getElementById('exit');
+
+/* ====== Estado de pantalla ====== */
+let ui = { role:null, sid:null, tab:'programa', w:1, d:1 };
+try{ const s = JSON.parse(sessionStorage.getItem('ui')); if(s) ui = s; }catch(e){}
+function go(patch){ Object.assign(ui, patch); try{sessionStorage.setItem('ui',JSON.stringify(ui));}catch(e){} render(); window.scrollTo(0,0); }
+$exit.onclick = () => go({role:null,sid:null,tab:'programa'});
+$back.onclick = () => {
+  if(ui.role==='entrenador' && ui.sid) go({sid:null,tab:'programa'});
+  else go({role:null,sid:null});
+};
+
+function render(){
+  const dl = document.getElementById('ejercicios');
+  dl.replaceChildren(...SUGERENCIAS.map(x=>h('option',{value:x})));
+  $app.replaceChildren();
+  $back.style.display = ui.role ? '' : 'none';
+  $exit.style.display = ui.role ? '' : 'none';
+  const s = db.students.find(x=>x.id===ui.sid);
+  if(ui.sid && !s) ui.sid = null;
+  if(!ui.role) { $title.textContent='Gym Progreso'; return vistaInicio(); }
+  if(ui.role==='entrenador'){
+    if(!ui.sid){ $title.textContent='Mis alumnos'; return vistaAlumnos(); }
+    $title.textContent = s.name; return vistaAlumno(s);
+  }
+  if(ui.role==='alumno'){
+    if(!ui.sid){ $title.textContent='¿Quién eres?'; return vistaElegir(); }
+    $title.textContent = s.name; return vistaRegistro(s);
+  }
+}
+
+/* ====== Inicio ====== */
+function vistaInicio(){
+  $app.append(
+    h('div',{class:'empty'}, h('div',{style:'font-size:48px'},'🏋️'), h('h2',{},'Registro de entrenamientos'), h('p',{class:'mut'},'4 semanas · lunes a viernes · 6 ejercicios por día')),
+    h('button',{class:'pri big',onclick:()=>go({role:'entrenador',sid:null})},'Soy el entrenador'),
+    h('button',{class:'big',onclick:()=>go({role:'alumno',sid:null,w:semanaActual(),d:diaActual()})},'Soy alumno')
+  );
+}
+function semanaActual(){ return 1; }
+function diaActual(){ const g = new Date().getDay(); return g>=1&&g<=5 ? g : 1; }
+
+/* ====== Entrenador: lista de alumnos ====== */
+function vistaAlumnos(){
+  const nombre = h('input',{placeholder:'Nombre del alumno',autocomplete:'off'});
+  const pin = h('input',{placeholder:'PIN opcional (4 dígitos)',inputmode:'numeric',maxlength:'4'});
+  const add = () => {
+    const n = nombre.value.trim(); if(!n) return nombre.focus();
+    db.students.push(nuevoAlumno(n, pin.value.replace(/\D/g,'').slice(0,4)));
+    guardar(); render();
+  };
+  nombre.addEventListener('keydown',e=>{ if(e.key==='Enter') add(); });
+  $app.append(h('div',{class:'card'},
+    h('div',{class:'mut',style:'margin-bottom:8px'},'Nuevo alumno'),
+    h('div',{class:'row'},nombre), h('div',{class:'row',style:'margin-top:8px'},pin, h('button',{class:'pri fix',onclick:add},'Añadir'))
+  ));
+  if(!db.students.length){
+    $app.append(h('div',{class:'empty'},'Aún no tienes alumnos.'),
+      h('button',{class:'big',onclick:()=>{ cargarDemo(); render(); }},'Cargar datos de ejemplo'));
+  }
+  for(const s of db.students){
+    const r = resumen(s);
+    $app.append(h('div',{class:'card',style:'cursor:pointer',onclick:()=>go({sid:s.id,tab:'programa',w:1,d:1})},
+      h('div',{class:'row'}, h('b',{},s.name), h('span',{class:'mut',style:'text-align:right'},r.diasCompletos+'/20 días')),
+      h('div',{class:'bar'},h('i',{style:'width:'+Math.round(r.diasCompletos/20*100)+'%'}))
+    ));
+  }
+  $app.append(h('div',{class:'card noprint'},
+    h('div',{class:'mut',style:'margin-bottom:8px'},'Copia de seguridad (los datos se guardan en este dispositivo)'),
+    h('div',{class:'row'},
+      h('button',{onclick:exportar},'Exportar'),
+      h('button',{onclick:()=>fileIn.click()},'Importar')
+    )
+  ));
+}
+const fileIn = h('input',{type:'file',accept:'application/json',style:'display:none',onchange:e=>{
+  const f = e.target.files[0]; if(!f) return;
+  f.text().then(t=>{ const d = JSON.parse(t); if(!d.students) throw 0; if(confirm('Esto reemplaza los datos actuales. ¿Continuar?')){ db=d; guardar(); render(); } }).catch(()=>alert('Archivo no válido.'));
+  e.target.value='';
+}});
+document.body.append(fileIn);
+function descargar(nombre, contenido, tipo){
+  const a = h('a',{href:URL.createObjectURL(new Blob([contenido],{type:tipo})),download:nombre});
+  document.body.append(a); a.click(); a.remove();
+}
+function exportar(){ descargar('gym-progreso-'+new Date().toISOString().slice(0,10)+'.json', JSON.stringify(db,null,1),'application/json'); }
+
+/* ====== Entrenador: detalle de alumno ====== */
+function vistaAlumno(s){
+  const tabs = [['programa','Programa'],['registro','Registro'],['informe','Informe']];
+  $app.append(h('div',{class:'tabs'}, tabs.map(([id,t])=>h('button',{class:ui.tab===id?'on':'',onclick:()=>go({tab:id})},t))));
+  if(ui.tab==='programa') vistaPrograma(s);
+  else if(ui.tab==='registro') vistaRegistro(s,true);
+  else vistaInforme(s);
+}
+
+function selectorSemanaDia(s){
+  const wrap = h('div');
+  wrap.append(h('div',{class:'pills'}, [1,2,3,4].map(w=>h('button',{class:ui.w===w?'on':'',onclick:()=>go({w})},'Sem '+w))));
+  wrap.append(h('div',{class:'pills'}, DIAS.map((n,i)=>{
+    const d=i+1, p = progDia(s,ui.w,d).some(e=>e.name.trim());
+    const hecho = completo(s,ui.w,d);
+    return h('button',{class:(ui.d===d?'on ':'')+(hecho?'done':''),onclick:()=>go({d}),title:n},n.slice(0,3)+(hecho?' ✓':(p?'':' ·')));
+  })));
+  return wrap;
+}
+
+function vistaPrograma(s){
+  $app.append(selectorSemanaDia(s));
+  const prog = progDia(s,ui.w,ui.d);
+  const card = h('div',{class:'card'}, h('div',{class:'mut',style:'margin-bottom:8px'}, DIAS[ui.d-1]+' · Semana '+ui.w+' — 6 ejercicios'));
+  prog.forEach((e,i)=>{
+    const n = h('input',{list:'ejercicios',placeholder:'Ejercicio '+(i+1),value:e.name,oninput:ev=>{e.name=ev.target.value;guardar();}});
+    const t = h('input',{placeholder:'Objetivo (ej. 4x10)',value:e.target,style:'max-width:140px',oninput:ev=>{e.target=ev.target.value;guardar();}});
+    card.append(h('div',{class:'row',style:'margin-bottom:8px'},h('span',{class:'fix mut',style:'width:18px'},i+1),n,t));
+  });
+  $app.append(card);
+  const copiar = (dest,txt) => {
+    if(!confirm(txt)) return;
+    const base = JSON.stringify(prog);
+    for(const [w,d] of dest) s.program[k(w,d)] = JSON.parse(base);
+    guardar(); render();
+  };
+  $app.append(h('div',{class:'card'},
+    h('div',{class:'mut',style:'margin-bottom:8px'},'Copiar este día (para no escribir todo)'),
+    h('div',{class:'row'},
+      h('button',{onclick:()=>copiar(DIAS.map((_,i)=>[ui.w,i+1]).filter(x=>x[1]!==ui.d),'¿Copiar este día a toda la semana '+ui.w+'?')},'A toda la semana'),
+      h('button',{onclick:()=>copiar([1,2,3,4].map(w=>[w,ui.d]).filter(x=>x[0]!==ui.w),'¿Copiar este día a las 4 semanas?')},'A las 4 semanas')
+    ),
+    h('div',{class:'row',style:'margin-top:8px'},
+      h('button',{onclick:()=>copiarSemana(s)},'Copiar semana '+ui.w+' → todas'),
+      h('button',{class:'dng',onclick:()=>{ if(confirm('¿Vaciar los 6 ejercicios de este día?')){ s.program[k(ui.w,ui.d)]=null; progDia(s,ui.w,ui.d); guardar(); render(); } }},'Vaciar día')
+    )
+  ));
+  $app.append(h('div',{class:'card noprint'},
+    h('button',{class:'dng',onclick:()=>{ if(confirm('¿Eliminar a '+s.name+' y todo su historial?')){ db.students=db.students.filter(x=>x.id!==s.id); guardar(); go({sid:null}); } }},'Eliminar alumno'),
+    h('div',{class:'mut',style:'margin-top:8px'},'PIN: '+(s.pin||'sin PIN')+' · ',
+      h('a',{href:'#',style:'color:var(--ok)',onclick:e=>{e.preventDefault();const p=prompt('Nuevo PIN de 4 dígitos (vacío = sin PIN)',s.pin);if(p!==null){s.pin=p.replace(/\D/g,'').slice(0,4);guardar();render();}}},'cambiar'))
+  ));
+}
+function copiarSemana(s){
+  if(!confirm('¿Copiar los ejercicios de la semana '+ui.w+' a las otras 3 semanas?')) return;
+  for(const w of [1,2,3,4]) if(w!==ui.w) for(let d=1;d<=5;d++) s.program[k(w,d)] = JSON.parse(JSON.stringify(progDia(s,ui.w,d)));
+  guardar(); render();
+}
+
+/* ====== Registro (alumno / entrenador) ====== */
+function seriesValidas(arr){ return (arr||[]).filter(x=>num(x.reps)>0); }
+function completo(s,w,d){
+  const prog = (s.program[k(w,d)]||[]).map((e,i)=>({e,i})).filter(x=>x.e.name.trim());
+  if(!prog.length) return false;
+  const l = (s.logs[k(w,d)]||{});
+  return prog.every(x=>seriesValidas(l[x.i]).length>0);
+}
+function ultimaVez(s,w,d,name){
+  const nn = norm(name);
+  for(let ww=w; ww>=1; ww--) for(let dd=(ww===w?d-1:5); dd>=1; dd--){
+    const p = s.program[k(ww,dd)]; if(!p) continue;
+    const i = p.findIndex(e=>norm(e.name)===nn); if(i<0) continue;
+    const ser = seriesValidas(((s.logs[k(ww,dd)]||{})[i]));
+    if(ser.length) return {w:ww,d:dd,ser};
+  }
+  return null;
+}
+
+function vistaRegistro(s,esEntrenador){
+  if(!esEntrenador) $app.append(h('div',{class:'mut',style:'margin-bottom:8px'},'Toca "+ Serie" y anota repeticiones y kilos.'));
+  $app.append(selectorSemanaDia(s));
+  const prog = progDia(s,ui.w,ui.d);
+  const hay = prog.some(e=>e.name.trim());
+  if(!hay){
+    $app.append(h('div',{class:'empty'},'Tu entrenador aún no ha cargado los ejercicios de este día.'));
+    return;
+  }
+  prog.forEach((e,i)=>{
+    if(!e.name.trim()) return;
+    const card = h('div',{class:'card'});
+    const cab = h('div',{class:'row'}, h('b',{},(i+1)+'. '+e.name), e.target?h('span',{class:'mut fix'},'Objetivo '+e.target):null);
+    card.append(cab);
+    const ult = ultimaVez(s,ui.w,ui.d,e.name);
+    if(ult) card.append(h('div',{class:'hint'},'Última vez (S'+ult.w+' '+DIAS[ult.d-1].slice(0,3)+'): '+ult.ser.map(x=>x.reps+'×'+fmt(num(x.kg))+'kg').join(' · ')));
+    const lista = h('div');
+    const series = seriesDe(s,ui.w,ui.d,i);
+    const pintar = () => {
+      lista.replaceChildren(...series.map((x,j)=>h('div',{class:'set'},
+        h('span',{class:'n'},j+1),
+        h('input',{type:'number',inputmode:'numeric',placeholder:'reps',value:x.reps??'',min:'0',oninput:ev=>{x.reps=ev.target.value;guardar();}}),
+        h('input',{type:'number',inputmode:'decimal',step:'0.5',placeholder:'kg',value:x.kg??'',min:'0',oninput:ev=>{x.kg=ev.target.value;guardar();}}),
+        h('button',{class:'sm dng',onclick:()=>{series.splice(j,1);guardar();pintar();},'aria-label':'Quitar serie'},'✕')
+      )));
+    };
+    pintar();
+    card.append(lista, h('button',{class:'sm',style:'margin-top:10px',onclick:()=>{
+      const prev = series[series.length-1] || (ult && ult.ser[0]) || {};
+      series.push({reps:prev.reps??'',kg:prev.kg??''}); guardar(); pintar();
+      const ins = lista.querySelectorAll('.set'); const last = ins[ins.length-1]; if(last) last.querySelector('input').focus();
+    }},'+ Serie'));
+    $app.append(card);
+  });
+}
+
+/* ====== Informe ====== */
+function resumen(s){
+  let diasCompletos=0, series=0, reps=0, volumen=0, ejerPlan=0, ejerHechos=0;
+  const mapa = new Map(); // nombre normalizado -> {label, w:{1..4:{max,vol,series,reps,mejor}}}
+  for(let w=1;w<=4;w++) for(let d=1;d<=5;d++){
+    if(completo(s,w,d)) diasCompletos++;
+    const p = s.program[k(w,d)]||[]; const l = s.logs[k(w,d)]||{};
+    p.forEach((e,i)=>{
+      if(!e.name.trim()) return;
+      ejerPlan++;
+      const ser = seriesValidas(l[i]);
+      if(ser.length) ejerHechos++;
+      const key = norm(e.name);
+      if(!mapa.has(key)) mapa.set(key,{label:e.name.trim(),w:{1:null,2:null,3:null,4:null}});
+      if(!ser.length) return;
+      const m = mapa.get(key);
+      const c = m.w[w] || (m.w[w] = {max:0,vol:0,series:0,reps:0,e1rm:0,best:0});
+      for(const x of ser){
+        const r=num(x.reps), kg=num(x.kg);
+        c.max=Math.max(c.max,kg); c.vol+=r*kg; c.series++; c.reps+=r;
+        c.best=Math.max(c.best,r); c.e1rm=Math.max(c.e1rm, kg>0 ? kg*(1+r/30) : r);
+        series++; reps+=r; volumen+=r*kg;
+      }
+    });
+  }
+  return {diasCompletos,series,reps,volumen,ejerPlan,ejerHechos,mapa};
+}
+function progresoEjercicio(m){
+  const ws = [1,2,3,4].filter(w=>m.w[w]);
+  if(ws.length<2) return null;
+  const a = m.w[ws[0]], b = m.w[ws[ws.length-1]];
+  const base = a.e1rm; if(!base) return null;
+  return (b.e1rm-base)/base*100;
+}
+function vistaInforme(s){
+  const r = resumen(s);
+  const hoy = new Date().toLocaleDateString('es-ES',{month:'long',year:'numeric'});
+  $app.append(h('div',{class:'printonly'},h('h1',{},'Informe mensual — '+s.name),h('p',{},hoy)));
+  $app.append(h('div',{class:'stats'},
+    h('div',{class:'stat'},h('span',{class:'mut'},'Asistencia'),h('b',{},r.diasCompletos+'/20'),h('div',{class:'bar'},h('i',{style:'width:'+r.diasCompletos/20*100+'%'}))),
+    h('div',{class:'stat'},h('span',{class:'mut'},'Ejercicios hechos'),h('b',{},r.ejerHechos+'/'+r.ejerPlan),h('div',{class:'bar'},h('i',{style:'width:'+(r.ejerPlan?r.ejerHechos/r.ejerPlan*100:0)+'%'}))),
+    h('div',{class:'stat'},h('span',{class:'mut'},'Series totales'),h('b',{},r.series)),
+    h('div',{class:'stat'},h('span',{class:'mut'},'Volumen total'),h('b',{},fmt(r.volumen/1000)+' t'))
+  ));
+  if(!r.mapa.size){ $app.append(h('div',{class:'empty'},'Todavía no hay ejercicios cargados.')); return; }
+
+  const tb = h('table');
+  tb.append(h('tr',{},h('th',{},'Ejercicio'),[1,2,3,4].map(w=>h('th',{},'S'+w)),h('th',{},'Prog.')));
+  const filas = [...r.mapa.values()].filter(m=>[1,2,3,4].some(w=>m.w[w]));
+  for(const m of filas){
+    const p = progresoEjercicio(m);
+    tb.append(h('tr',{},
+      h('td',{},m.label),
+      [1,2,3,4].map(w=>h('td',{},m.w[w]?(m.w[w].max>0?fmt(m.w[w].max)+' kg':m.w[w].best+' rep'):'–')),
+      h('td',{class:p==null?'':(p>=0?'up':'down')}, p==null?'–':(p>=0?'+':'')+fmt(p)+'%')
+    ));
+  }
+  $app.append(h('div',{class:'card'},
+    h('div',{class:'mut',style:'margin-bottom:8px'},'Mejor marca por semana (kg máximo; repeticiones si es peso corporal) y progreso estimado, 1ª vs última semana con datos'),
+    h('div',{style:'overflow-x:auto'},tb)
+  ));
+
+  const tb2 = h('table');
+  tb2.append(h('tr',{},h('th',{},'Volumen (kg)'),[1,2,3,4].map(w=>h('th',{},'S'+w))));
+  for(const m of filas) tb2.append(h('tr',{},h('td',{},m.label),[1,2,3,4].map(w=>h('td',{},m.w[w]?fmt(m.w[w].vol):'–'))));
+  $app.append(h('div',{class:'card'},h('div',{class:'mut',style:'margin-bottom:8px'},'Volumen = series × repeticiones × kg'),h('div',{style:'overflow-x:auto'},tb2)));
+
+  const mejores = filas.map(m=>({m,p:progresoEjercicio(m)})).filter(x=>x.p!=null).sort((a,b)=>b.p-a.p);
+  if(mejores.length) $app.append(h('div',{class:'card'},
+    h('b',{},'Resumen'),
+    h('p',{},'Mayor mejora: ',h('b',{},mejores[0].m.label),' (',(mejores[0].p>=0?'+':'')+fmt(mejores[0].p)+'%)'),
+    mejores.length>1 && mejores[mejores.length-1].p<0 ? h('p',{},'A trabajar: ',h('b',{},mejores[mejores.length-1].m.label),' ('+fmt(mejores[mejores.length-1].p)+'%)') : null
+  ));
+
+  $app.append(h('div',{class:'row noprint'},
+    h('button',{class:'pri',onclick:()=>window.print()},'Imprimir / PDF'),
+    h('button',{onclick:()=>csv(s,filas)},'Descargar CSV')
+  ));
+}
+function csv(s,filas){
+  const rows = [['Alumno','Semana','Dia','Ejercicio','Serie','Repeticiones','Kg']];
+  for(let w=1;w<=4;w++) for(let d=1;d<=5;d++){
+    const p=s.program[k(w,d)]||[], l=s.logs[k(w,d)]||{};
+    p.forEach((e,i)=>seriesValidas(l[i]).forEach((x,j)=>rows.push([s.name,w,DIAS[d-1],e.name,j+1,x.reps,x.kg])));
+  }
+  const txt = rows.map(r=>r.map(c=>'"'+String(c??'').replace(/"/g,'""')+'"').join(';')).join('\n');
+  descargar('informe-'+s.name.replace(/\W+/g,'_')+'.csv','﻿'+txt,'text/csv');
+}
+
+/* ====== Alumno: elegir nombre ====== */
+function vistaElegir(){
+  if(!db.students.length){ $app.append(h('div',{class:'empty'},'Tu entrenador aún no ha creado tu perfil.')); return; }
+  for(const s of db.students){
+    $app.append(h('button',{class:'big',onclick:()=>{
+      if(s.pin){ const p = prompt('PIN de '+s.name); if(p!==s.pin) return alert('PIN incorrecto'); }
+      go({sid:s.id,w:ui.w||1,d:ui.d||1});
+    }},s.name));
+  }
+}
+
+/* ====== Datos de ejemplo ====== */
+function cargarDemo(){
+  const dias = [
+    ['Sentadilla','Press de banca','Remo con barra','Press militar','Curl de bíceps','Plancha'],
+    ['Peso muerto rumano','Press inclinado con mancuernas','Jalón al pecho','Elevaciones laterales','Tríceps en polea','Abdominales'],
+    ['Prensa de piernas','Fondos','Remo en polea','Face pull','Curl de bíceps','Plancha'],
+    ['Zancadas','Press de banca','Dominadas','Press militar','Press francés','Abdominales'],
+    ['Hip thrust','Press inclinado con mancuernas','Remo con barra','Elevaciones laterales','Curl de bíceps','Plancha']
+  ];
+  const base = {'Sentadilla':60,'Press de banca':50,'Remo con barra':40,'Press militar':30,'Curl de bíceps':14,'Plancha':0,'Peso muerto rumano':60,'Press inclinado con mancuernas':18,'Jalón al pecho':40,'Elevaciones laterales':6,'Tríceps en polea':20,'Abdominales':0,'Prensa de piernas':100,'Fondos':0,'Remo en polea':35,'Face pull':15,'Zancadas':20,'Dominadas':0,'Press francés':20,'Hip thrust':60};
+  const s = nuevoAlumno('Lucía (ejemplo)','');
+  for(let w=1;w<=4;w++) for(let d=1;d<=5;d++){
+    s.program[k(w,d)] = dias[d-1].map(n=>({name:n,target:'4x10'}));
+    if(w===4 && d>3) continue; // último tramo sin completar
+    const l = s.logs[k(w,d)] = {};
+    dias[d-1].forEach((n,i)=>{
+      const kg = base[n]*(1+0.04*(w-1)); // +4% semanal
+      l[i] = [0,1,2,3].map(j=>({reps:String(10-(j>2?1:0)),kg:String(Math.round(kg/2.5)*2.5)}));
+    });
+  }
+  db.students.push(s); guardar();
+}
+
+if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(()=>{});
+render();
+</script>
+</body>
+</html>
