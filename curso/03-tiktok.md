@@ -28,11 +28,9 @@ Además, el sistema evita mostrar dos videos seguidos del mismo creador o con el
 
 Piénsalo como una prueba por etapas:
 
-1. Publicas un video.
-2. TikTok se lo muestra a un grupo pequeño de personas a las que podría interesarle.
-3. Mide cómo reaccionan: ¿lo miraron entero?, ¿lo deslizaron rápido?, ¿lo compartieron?
-4. Si la reacción es buena, lo muestra a un grupo más grande. Si es mala, lo frena.
-5. Este ciclo se repite. Un video puede seguir creciendo durante días o semanas.
+1. TikTok muestra tu video a un grupo pequeño de personas a las que podría interesarle.
+2. Mide cómo reaccionan: ¿lo miraron entero?, ¿lo deslizaron rápido?, ¿lo compartieron?
+3. Si la reacción es buena, lo muestra a un grupo más grande. Si es mala, lo frena. Un video puede seguir creciendo durante días o semanas.
 
 ### Las señales que más importan
 
@@ -43,11 +41,7 @@ Piénsalo como una prueba por etapas:
 - **Comentarios**: muestran conversación. Responder comentarios con video también genera contenido nuevo.
 - **Búsquedas**: cada vez más gente usa TikTok como buscador. Si tu video responde una búsqueda, puede recibir visitas durante meses.
 
-### Lo que no importa tanto
-
-- La cantidad de seguidores no es lo que decide si un video se reparte.
-- Publicar muchas veces por día no garantiza nada si los videos no retienen.
-- Los hashtags ayudan a clasificar, pero no "hacen viral" un video malo.
+Lo que no decide tanto: la cantidad de seguidores, publicar muchas veces por día o llenar el video de hashtags.
 
 > **Tarea:** Durante 3 días, usa TikTok como espectador con atención. Cada vez que mires un video completo, anota en una libreta: tema, cómo empezaba (primera frase) y cuánto duraba. Al final, deberías tener al menos 15 anotaciones.
 
@@ -118,11 +112,11 @@ Cuando tengas enlace, usa una página que agrupe varios links (por ejemplo, Link
 
 En **Configuración y privacidad > Privacidad**:
 
-1. **Cuenta privada: desactivada.** Si la cuenta es privada, tus videos no salen en Para ti.
+1. **Cuenta privada: desactivada.** Si es privada, tus videos no salen en Para ti.
 2. **Sugerir tu cuenta a otros:** actívalo.
-3. **Comentarios:** déjalos abiertos, pero activa el filtro de palabras ofensivas y agrega palabras que no quieras ver.
-4. **Dúos y Stitch** (otras personas usan tu video dentro del suyo): actívalos si quieres más alcance.
-5. **Descargas:** decide si permites que bajen tus videos. Si los permites, se comparten más, pero pueden robarlos.
+3. **Comentarios:** abiertos, con el filtro de palabras ofensivas activado.
+4. **Dúos y Stitch** (otras personas usan tu video dentro del suyo): actívalos para ganar alcance.
+5. **Descargas:** si las permites, tus videos se comparten más, pero es más fácil que los copien.
 
 > **Tarea:** Crea la cuenta, completa foto, nombre con palabra clave y bio con la fórmula. Activa la verificación en dos pasos. Escribe 3 versiones de bio y elige la más clara.
 
@@ -166,10 +160,9 @@ Un **LIVE** es una transmisión en vivo. Según la ayuda oficial de TikTok, nece
 Cómo hacer tu primer LIVE:
 
 1. Anuncia el día y la hora en un video o en la bio.
-2. Prepara un tema concreto ("respondo preguntas sobre cómo empezar a vender por Instagram") y una lista de 10 puntos para no quedarte en blanco.
-3. Pon el teléfono fijo en un trípode, con buena luz.
-4. Saluda por el nombre a quien entra y pide que hagan preguntas.
-5. Dura al menos 30 minutos: la audiencia tarda en llegar.
+2. Prepara un tema concreto y una lista de 10 puntos para no quedarte en blanco.
+3. Teléfono fijo en un trípode, buena luz. Saluda por el nombre a quien entra.
+4. Dura al menos 30 minutos: la audiencia tarda en llegar.
 
 ### Series y listas de reproducción
 
@@ -295,17 +288,17 @@ Para alguien en Argentina, hoy los ingresos propios son el camino principal.
 
 **Regalos en LIVE.** Los espectadores compran monedas y te envían regalos durante el vivo. Los regalos se convierten en "diamantes" y los diamantes en dinero. Requisitos según la ayuda oficial: 18 años, poder hacer LIVE, vivir en un lugar donde la función esté disponible y tener la cuenta en regla. Medios argentinos describen a creadores del país cobrando regalos y retirando, casi siempre, por PayPal. TikTok no publica una comisión única y las fuentes no coinciden en cuánto se queda la plataforma.
 
-**Suscripciones.** Tus seguidores pagan una cuota mensual a cambio de beneficios (insignias, contenido exclusivo, chats). Según el anuncio oficial de 2024: 18 años, 10 000 seguidores y 100 000 vistas en el último mes, o cumplir requisitos de LIVE. En ese lanzamiento no figuraba Argentina. No pude confirmar si está disponible hoy en el país.
+**Suscripciones.** Tus seguidores pagan una cuota mensual a cambio de beneficios (insignias, contenido exclusivo). Según el anuncio oficial de 2024: 18 años, 10 000 seguidores y 100 000 vistas en el último mes, o cumplir requisitos de LIVE. En ese lanzamiento no figuraba Argentina y no pude confirmar si está disponible hoy.
 
-**TikTok Shop y afiliados de TikTok Shop.** TikTok Shop es la tienda dentro de la app. Ser **afiliado** significa recomendar productos de otros vendedores en tus videos y cobrar una comisión por cada venta. En Latinoamérica funciona en **México y Brasil**. Para **Argentina**, TikTok confirmó a Forbes Argentina que **no hay fecha de lanzamiento**. Para Colombia, Chile y Perú las fuentes se contradicen: no está verificado.
+**TikTok Shop y afiliados.** TikTok Shop es la tienda dentro de la app. Ser **afiliado** significa recomendar productos de otros vendedores y cobrar una comisión por venta. En Latinoamérica funciona en **México y Brasil**. Para **Argentina**, TikTok confirmó a Forbes Argentina que **no hay fecha de lanzamiento**. Para Colombia, Chile y Perú las fuentes se contradicen.
 
-**TikTok One (antes Creator Marketplace).** Es la plataforma oficial donde las marcas buscan creadores para campañas pagas. El viejo Creator Marketplace se integró en TikTok One en 2025. Los requisitos aparecen en la app, en la pestaña de monetización. No encontré confirmación de que los creadores de Argentina puedan unirse.
+**TikTok One (antes Creator Marketplace).** Es la plataforma oficial donde las marcas buscan creadores para campañas pagas. Los requisitos aparecen en la pestaña de monetización. No encontré confirmación de que los creadores de Argentina puedan unirse.
 
-**Acuerdos directos con marcas.** Una marca te paga (en dinero o en producto) por mencionar su producto. No depende de TikTok, así que funciona en Argentina. Debes marcar el contenido como publicidad con la opción de **contenido de marca** al publicar. Las marcas pequeñas y locales trabajan con cuentas chicas si el público es muy específico.
+**Acuerdos directos con marcas.** Una marca te paga (en dinero o en producto) por mencionar su producto. No depende de TikTok, así que funciona en Argentina. Debes activar la opción de **contenido de marca** al publicar. Las marcas locales trabajan con cuentas chicas si el público es muy específico.
 
-**Afiliación en Hotmart (u otras plataformas).** **Hotmart** es una plataforma de productos digitales (cursos, guías). Como afiliado, recomiendas el curso de otra persona y cobras una comisión. Funciona en Argentina; las comisiones se suelen liquidar en dólares y Hotmart informa cambios por normas del Banco Central argentino, así que revisa su centro de ayuda. En Argentina también existe el programa de creadores y afiliados de **Mercado Libre**, que permite recomendar productos de su catálogo.
+**Afiliación en Hotmart y Mercado Libre.** **Hotmart** es una plataforma de productos digitales (cursos, guías). Como afiliado, recomiendas el curso de otra persona y cobras comisión. Funciona en Argentina; las comisiones suelen liquidarse en dólares y Hotmart informó cambios por normas del Banco Central, así que revisa su centro de ayuda. En Argentina también existe el programa de creadores de **Mercado Libre**.
 
-**Vender producto o servicio propio.** Es la vía con más control: un servicio (diseño, clases, asesorías), un producto físico (con una tienda en Tiendanube o Mercado Libre) o uno digital (una guía, una plantilla, un curso en Hotmart). TikTok te trae la atención; el enlace en la bio o Instagram cierran la venta.
+**Vender producto o servicio propio.** Es la vía con más control: un servicio (diseño, clases, asesorías), un producto físico (con tienda en Tiendanube o Mercado Libre) o uno digital (guía, plantilla, curso en Hotmart). TikTok trae la atención; el enlace en la bio o Instagram cierran la venta.
 
 ### Tabla resumen de monetización en TikTok
 
@@ -424,12 +417,12 @@ Cómo revisar sin volverte loco:
 2. **Copiar videos de otros creadores.** TikTok prioriza el contenido original y puede no recomendar contenido no original. Inspírate, pero haz tu versión.
 3. **Comprar seguidores, vistas o me gusta.** Son cuentas falsas que no miran tus videos, bajan tu retención y van contra las reglas. Además, los requisitos de monetización exigen seguidores y vistas "auténticos".
 4. **Usar apps de "seguir y dejar de seguir"** o grupos de intercambio de me gusta. Mismo problema.
-5. **Borrar y volver a subir el mismo video** muchas veces porque "no anduvo". Mejor rehazlo con otro gancho.
-6. **Videos horizontales o con mala calidad de audio.**
-7. **Violar las Normas de la comunidad**: contenido peligroso, engañoso o música con derechos en cuenta de empresa. Esto puede restringir tu alcance o tu acceso a monetización.
+5. **Borrar y volver a subir el mismo video** porque "no anduvo". Mejor rehazlo con otro gancho.
+6. **Videos horizontales o con mal audio.**
+7. **Violar las Normas de la comunidad** (contenido peligroso, engañoso, música sin licencia en cuenta de empresa): puede restringir tu alcance y tu monetización.
 8. **Cambiar de tema todo el tiempo.** El algoritmo no sabe a quién mostrarte.
-9. **Prometer ganancias o resultados** que no puedes demostrar. Además de poco ético, puede violar las reglas de publicidad.
-10. **Abandonar a las dos semanas.** La mayoría de las cuentas que crecen tardaron meses.
+9. **Prometer ganancias** que no puedes demostrar.
+10. **Abandonar a las dos semanas.**
 
 > **Tarea:** Revisa tus videos publicados y marca si alguno tiene marca de agua, audio malo o formato horizontal. Rehazlo si hace falta.
 
@@ -441,8 +434,8 @@ Cómo revisar sin volverte loco:
 - Los primeros videos suelen tener pocas vistas (a veces menos de 300). Es normal: TikTok todavía está aprendiendo a quién mostrarte.
 - Lo más común es que la tracción llegue después de 2 a 6 meses de publicar con constancia, y a veces más. Muchas cuentas no despegan nunca, sobre todo si no mejoran sus ganchos.
 - Un video viral no es un negocio. Lo que construye ingresos es una audiencia que confía en ti y una oferta clara.
-- Desde Argentina, como el programa de recompensas y TikTok Shop no están disponibles, tus primeros ingresos probablemente vendrán de vender un servicio o producto propio, de afiliados, o de acuerdos con marcas locales. Es más trabajo, pero también depende menos de las decisiones de TikTok.
-- Dedica un tiempo fijo: por ejemplo, 1 hora por día o dos bloques de 3 horas por semana. Es mejor poco y constante que mucho y de golpe.
+- Desde Argentina, sin programa de recompensas ni TikTok Shop, tus primeros ingresos probablemente vendrán de un servicio o producto propio, de afiliados o de marcas locales. Es más trabajo, pero depende menos de las decisiones de TikTok.
+- Dedica un tiempo fijo (por ejemplo, 1 hora por día). Mejor poco y constante que mucho y de golpe.
 
 > **Tarea:** Escribe en una hoja tu objetivo de 90 días medido en acciones, no en dinero: "Publicar 60 videos, aprender a leer la retención y conseguir mis primeros 10 mensajes de interesados".
 

@@ -72,14 +72,7 @@ El **Centro de cuentas** es el lugar donde Meta conecta tus cuentas de Instagram
 2. Toca **Agregar cuentas** y conecta tu perfil de Facebook.
 3. Si tienes un negocio, crea una **página de Facebook** (es gratis) y conéctala desde **Editar perfil > Página**.
 
-**Meta Business Suite** es una herramienta gratuita de Meta (en computadora en business.facebook.com, o en el teléfono como app) que sirve para:
-
-- Programar publicaciones e historias de Instagram y Facebook a la vez.
-- Responder todos los mensajes desde una bandeja única.
-- Ver estadísticas más completas.
-- Gestionar anuncios y catálogos de productos.
-
-Para empezar, no la necesitas. Úsala cuando quieras programar contenido desde la computadora o responder mensajes de forma ordenada.
+**Meta Business Suite** es una herramienta gratuita de Meta (en business.facebook.com o como app) para programar publicaciones e historias en Instagram y Facebook a la vez, responder todos los mensajes desde una bandeja única, ver estadísticas y gestionar anuncios y catálogos. Para empezar no la necesitas; úsala cuando quieras programar desde la computadora u ordenar tus mensajes.
 
 ### Nombre de usuario y nombre visible
 
@@ -108,10 +101,9 @@ Consejo: aunque puedas poner cinco, el primero es el que más clics recibe. Pon 
 ### Configuración de privacidad
 
 1. **Cuenta privada: desactivada.** Las cuentas privadas no aparecen en recomendaciones.
-2. **Palabras ocultas**: activa el filtro de comentarios ofensivos y agrega palabras propias.
-3. **Compartir y reutilizar**: permite que otros compartan tus publicaciones en historias y que usen tus Reels en remixes. Más alcance.
-4. **Mensajes**: revisa quién puede escribirte. Si vas a vender por DM, deja que te escriban personas que no sigues (los mensajes llegan a "Solicitudes").
-5. **Mejores amigos**: lista privada para compartir historias solo con algunas personas. Útil para probar ideas.
+2. **Palabras ocultas**: activa el filtro de comentarios ofensivos.
+3. **Compartir y reutilizar**: permite que compartan tus publicaciones en historias y usen tus Reels en remixes.
+4. **Mensajes**: si vas a vender por DM, deja que te escriban personas que no sigues (llegan a "Solicitudes").
 
 > **Tarea:** Cambia a cuenta profesional, completa nombre con palabra clave, bio de 4 líneas y al menos un enlace. Conecta tu Facebook en el Centro de cuentas. Activa la autenticación en dos pasos.
 
@@ -150,14 +142,7 @@ Cómo hacerlo:
 
 Las **historias** son publicaciones que desaparecen a las 24 horas. No sirven tanto para llegar a gente nueva, pero son clave para **conectar** con quienes ya te siguen y para **vender**.
 
-Qué publicar en historias:
-
-- Detrás de escena de tu día o tu trabajo.
-- **Encuestas** y **preguntas** (stickers) para saber qué quiere tu audiencia.
-- El **sticker de enlace**, que lleva a cualquier página. Está disponible para todas las cuentas.
-- Testimonios de clientes (con su permiso).
-
-Guarda las mejores en **Historias destacadas** (los círculos debajo de la bio): "Precios", "Opiniones", "Cómo comprar".
+Qué publicar: detrás de escena de tu trabajo, **encuestas** y **preguntas** (stickers) para saber qué quiere tu audiencia, el **sticker de enlace** (lleva a cualquier página) y testimonios de clientes con su permiso. Guarda las mejores en **Historias destacadas** (los círculos debajo de la bio): "Precios", "Opiniones", "Cómo comprar".
 
 ### Canales de difusión
 

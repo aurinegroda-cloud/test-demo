@@ -92,11 +92,11 @@ La calidad de imagen importa menos de lo que crees. **El audio importa más que 
 
 | Elemento | Opción gratis | Opción barata | Comentario |
 |---|---|---|---|
-| **Cámara** | Tu celular (cámara trasera, que es mejor que la frontal) | — | Graba en 1080p a 30 cuadros por segundo. Limpia el lente antes. |
-| **Micrófono** | Los auriculares con micrófono del celular, cerca de la boca | Micrófono corbatero (lavalier) con cable o inalámbrico básico | Es la mejor primera inversión. |
-| **Luz** | Una ventana de frente a ti, de día | Aro de luz o panel LED chico | Nunca grabes con la ventana detrás tuyo. |
-| **Soporte** | Libros apilados | Trípode con soporte para celular | Que no se mueva la imagen. |
-| **Sonido del ambiente** | Habitación con ropa, cortinas, almohadones | — | Las paredes vacías hacen eco. Un placard abierto lleno de ropa es una cabina de grabación casera. |
+| **Cámara** | Tu celular (cámara trasera, mejor que la frontal) | — | 1080p a 30 cuadros por segundo. Limpia el lente. |
+| **Micrófono** | Auriculares con micrófono, cerca de la boca | Micrófono corbatero (lavalier) con cable o inalámbrico básico | La mejor primera inversión. |
+| **Luz** | Una ventana de frente, de día | Aro de luz o panel LED chico | Nunca con la ventana detrás. |
+| **Soporte** | Libros apilados | Trípode para celular | Imagen quieta. |
+| **Ambiente** | Habitación con ropa, cortinas, almohadones | — | Las paredes vacías hacen eco; un placard lleno de ropa es una cabina casera. |
 
 No pude verificar precios actuales por país; como referencia, el kit barato (corbatero, aro de luz y trípode) suele costar algunas decenas de dólares en Mercado Libre. Compra solo después de publicar tus primeros 3 videos.
 
@@ -167,10 +167,10 @@ Si tu video muestra algo **realista** creado o modificado de forma importante co
 
 ### 5.3 Cómo combinarlos
 
-1. **El largo es el centro.** Haz un video largo por semana.
-2. **Corta 2 o 3 Shorts de cada largo.** Elige los momentos más fuertes, ponlos en vertical, agrega subtítulos y un gancho al inicio.
-3. **Vincula el Short al largo.** Al subir un Short puedes agregar un "video relacionado" que lleva al largo.
-4. **Usa los Shorts como laboratorio.** Si un Short funciona muy bien, ese tema merece un video largo.
+1. **El largo es el centro:** uno por semana.
+2. **Corta 2 o 3 Shorts de cada largo:** los momentos más fuertes, en vertical, con subtítulos y gancho.
+3. **Vincula el Short al largo** con la opción "video relacionado" al subirlo.
+4. **Usa los Shorts como laboratorio:** si uno funciona muy bien, ese tema merece un video largo.
 
 > **Tarea:** Mira tu lista de 30 ideas. Marca con una L las que necesitan explicación (video largo) y con una S las que se pueden contar en menos de un minuto (Short).
 
@@ -398,12 +398,12 @@ Esto no es asesoramiento fiscal. Confirma tu caso con un contador.
 | Fuente | Qué es | Cuándo está disponible |
 |---|---|---|
 | **Membresías del canal** | Suscripción mensual paga con beneficios (insignias, emojis, videos exclusivos). | Nivel 1 del YPP (500 suscriptores) |
-| **Super Thanks** | Propina que un espectador deja en un video, con un comentario destacado. | Nivel 1 |
-| **Super Chat y Super Stickers** | Mensajes destacados pagos durante transmisiones en vivo. | Nivel 1 |
-| **YouTube Shopping (afiliados)** | Etiquetas productos en tus videos y cobras comisión si alguien compra. **En Argentina y México funciona con Mercado Libre desde junio de 2026**, desde 500 suscriptores. La comisión la pone cada vendedor y se acredita en Mercado Pago. | Requiere estar en el YPP y cumplir requisitos del programa de afiliados |
-| **Enlaces de afiliados externos** | Pones en la descripción un enlace a un producto (por ejemplo, del programa de afiliados de Mercado Libre o de Amazon) y cobras comisión por venta. | Desde el día 1. Aclara siempre que es un enlace de afiliado. |
-| **Patrocinios** | Una marca te paga por mencionar su producto. | Cuando tengas audiencia en un nicho claro, incluso con pocos miles de suscriptores. Declara el patrocinio en la subida (casilla de "promoción pagada"). |
-| **Productos propios** | Vendes un curso, una guía, una plantilla o una consultoría. **Hotmart** es una plataforma muy usada en Latinoamérica para vender productos digitales y cobrar en distintos países; cobra una comisión por venta (revisa la tarifa vigente). | Desde que tengas algo útil que ofrecer. Suele ser la fuente más rentable para canales chicos de nicho. |
+| **Super Thanks** | Propina en un video, con comentario destacado. | Nivel 1 |
+| **Super Chat y Super Stickers** | Mensajes pagos destacados en transmisiones en vivo. | Nivel 1 |
+| **YouTube Shopping (afiliados)** | Etiquetas productos en tus videos y cobras comisión por venta. **En Argentina y México funciona con Mercado Libre desde junio de 2026**, desde 500 suscriptores; la comisión la fija cada vendedor y se cobra en Mercado Pago. | Dentro del YPP, con los requisitos del programa de afiliados |
+| **Afiliados externos** | Enlace en la descripción (por ejemplo, afiliados de Mercado Libre o Amazon) con comisión por venta. | Desde el día 1. Aclara que es enlace de afiliado. |
+| **Patrocinios** | Una marca te paga por mencionar su producto. | Con un nicho claro, incluso con pocos miles de suscriptores. Márcalo como "promoción pagada" al subir. |
+| **Productos propios** | Curso, guía, plantilla o consultoría. **Hotmart**, muy usada en Latinoamérica, permite vender productos digitales y cobra comisión por venta (revisa la tarifa vigente). | Cuando tengas algo útil que ofrecer. Suele ser lo más rentable para canales chicos de nicho. |
 
 Dato honesto: para un canal pequeño en español, muchas veces **los afiliados, los patrocinios y los productos propios dejan más plata que los anuncios**. No dependas solo del YPP.
 
@@ -419,12 +419,12 @@ Dato honesto: para un canal pequeño en español, muchas veces **los afiliados, 
 
 | Métrica | Dónde está | Qué te dice | Si está baja... |
 |---|---|---|---|
-| **Impresiones** | Estadísticas > Alcance | Cuántas veces YouTube mostró tu miniatura | YouTube todavía no confía en el tema o el video no encaja con lo que busca la gente. Trabaja la búsqueda. |
-| **CTR de las impresiones** | Estadísticas > Alcance | % de clics sobre las impresiones | Mejora miniatura y título. Para canales nuevos, entre 2% y 10% es lo habitual; compárate contigo mismo. |
-| **Duración media de visualización** | Estadísticas > Participación | Cuántos minutos mira la persona promedio | Acorta introducciones, corta relleno. |
-| **Retención de la audiencia** (gráfico) | Dentro de cada video > Participación | En qué segundo se va la gente | Mira las caídas bruscas: ahí algo falló. Las subidas indican partes que la gente vuelve a ver: haz más de eso. |
-| **Fuentes de tráfico** | Estadísticas > Alcance | De dónde llegan las vistas (búsqueda, inicio, sugeridos, Shorts) | Te dice qué está funcionando. |
-| **Suscriptores por video** | Estadísticas > Audiencia | Qué videos convierten espectadores en suscriptores | Haz más videos de ese tipo. |
+| **Impresiones** | Estadísticas > Alcance | Cuántas veces YouTube mostró tu miniatura | El tema no encaja con lo que busca la gente. Trabaja la búsqueda. |
+| **CTR de las impresiones** | Estadísticas > Alcance | % de clics sobre las impresiones | Mejora miniatura y título. Muchos canales se mueven entre 2% y 10%; compárate contigo. |
+| **Duración media de visualización** | Estadísticas > Participación | Minutos que mira la persona promedio | Acorta la introducción, corta relleno. |
+| **Retención de la audiencia** (gráfico) | Cada video > Participación | En qué segundo se va la gente | En las caídas bruscas algo falló; las subidas son partes que la gente repite: haz más de eso. |
+| **Fuentes de tráfico** | Estadísticas > Alcance | De dónde llegan las vistas | Te dice qué funciona. |
+| **Suscriptores por video** | Estadísticas > Audiencia | Qué videos generan suscriptores | Haz más de ese tipo. |
 
 ### 9.2 Cómo diagnosticar un video
 
@@ -485,16 +485,16 @@ Al terminar tendrás unos **12 videos largos y 25 a 35 Shorts**. Eso es una base
 
 ### 12.1 Cuánto se tarda en monetizar
 
-No hay una cifra oficial. La experiencia de la mayoría de los creadores indica que, publicando con constancia, **llegar al nivel de 500 suscriptores suele llevar varios meses**, y **llegar a los ingresos por anuncios suele llevar entre uno y varios años**. Muchos canales no llegan nunca. Con los umbrales que rigen desde febrero de 2027 (8000 horas o 20 millones de vistas de Shorts), el camino es más largo que antes.
+No hay cifra oficial. Según la experiencia de la mayoría de los creadores, publicando con constancia, **llegar a 500 suscriptores suele llevar varios meses** y **llegar a los anuncios, de uno a varios años**. Muchos canales no llegan nunca, y con los umbrales de 2027 el camino es más largo.
 
-Para darte una idea del tamaño: 8000 horas en un año son 480.000 minutos. Si tus videos se miran en promedio 4 minutos, necesitas unas **120.000 vistas de videos largos en 12 meses**, más 1000 suscriptores. Es posible, pero no es rápido.
+Para dimensionarlo: 8000 horas son 480.000 minutos. Si tus videos se miran en promedio 4 minutos, necesitas unas **120.000 vistas de videos largos en 12 meses**, más 1000 suscriptores.
 
 ### 12.2 Cuánto paga YouTube: CPM y RPM
 
-- **CPM** (costo por mil): lo que pagan los anunciantes por cada 1000 veces que se muestra un anuncio. No es lo que tú cobras.
-- **RPM** (ingresos por mil): lo que **tú** ganas por cada 1000 vistas, después de la parte de YouTube y contando las vistas sin anuncio. Es la cifra que importa y la ves en YouTube Studio una vez monetizado.
+- **CPM** (costo por mil): lo que pagan los anunciantes por cada 1000 anuncios mostrados. No es lo que cobras.
+- **RPM** (ingresos por mil): lo que **tú** ganas por cada 1000 vistas, ya descontada la parte de YouTube y contando las vistas sin anuncio. Es la cifra que importa.
 
-El RPM depende sobre todo de **dónde vive tu audiencia** y de **tu nicho**, más que del idioma. Algunas referencias de 2026 (de empresas del sector, no oficiales):
+El RPM depende sobre todo de **dónde vive tu audiencia** y de **tu nicho**. Referencias de 2026 (de empresas del sector, no oficiales):
 
 | Dato | Cifra aproximada |
 |---|---|
