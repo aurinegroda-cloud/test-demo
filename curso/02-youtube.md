@@ -10,9 +10,9 @@ Datos verificados al 28 de noviembre de 2026. YouTube cambia sus reglas seguido.
 
 ### 1.1 Qué es el "algoritmo"
 
-El **algoritmo** es el sistema automático que decide qué video mostrarle a cada persona. No es una persona que juzga tu canal. Es un programa que observa cómo reaccionan los espectadores y trata de predecir qué van a querer ver después.
+El **algoritmo** es el sistema automático que decide qué video mostrarle a cada persona. Observa cómo reaccionan los espectadores y trata de predecir qué van a querer ver después.
 
-La idea clave: **YouTube no recomienda canales, recomienda videos a personas.** Si un video tuyo deja contentos a quienes lo ven, YouTube lo muestra a más gente parecida. Si no, deja de mostrarlo. Esto pasa con cada video por separado.
+La idea clave: **YouTube no recomienda canales, recomienda videos a personas.** Si un video deja contentos a quienes lo ven, YouTube lo muestra a más gente parecida. Si no, deja de mostrarlo.
 
 ### 1.2 Dónde aparecen tus videos
 
@@ -47,11 +47,11 @@ Un **nicho** es el tema concreto de tu canal. "Cocina" es amplio. "Recetas barat
 
 ### 2.2 Crea la cuenta y el canal
 
-1. **Cuenta de Google.** Si tienes Gmail, ya la tienes. Si quieres separar lo personal del canal, crea una cuenta nueva en accounts.google.com.
-2. **Activa la verificación en 2 pasos** en la configuración de seguridad de tu cuenta de Google. Es obligatoria para postularte al Programa de Socios más adelante, y protege tu canal de robos (hay muchos hackeos de canales).
-3. **Crea el canal como "cuenta de marca".** Una **cuenta de marca** es un canal que no está atado a tu nombre personal y que puede tener varios administradores. Ve a youtube.com, haz clic en tu foto, "Crear un canal", y elige usar un nombre personalizado. Así puedes ponerle el nombre del canal y, más adelante, sumar un editor sin darle tu contraseña.
-4. **Nombre del canal.** Corto, fácil de pronunciar y de escribir, que sugiera el tema. Evita números y guiones raros. Antes de decidir, búscalo en YouTube, Instagram y TikTok para ver que no esté usado.
-5. **Handle (identificador).** Es tu "@nombre", por ejemplo @recetasbaratas. Aparece en la URL de tu canal (youtube.com/@recetasbaratas). Lo configuras en YouTube Studio > Personalización > Información básica. Intenta que sea igual al nombre del canal y al de tus otras redes.
+1. **Cuenta de Google.** Si tienes Gmail, ya la tienes. Puedes crear una nueva para separar lo personal del canal.
+2. **Activa la verificación en 2 pasos** (seguridad de la cuenta de Google). Es obligatoria para el Programa de Socios y protege el canal de robos.
+3. **Crea el canal como "cuenta de marca".** Una **cuenta de marca** es un canal no atado a tu nombre personal, que puede tener varios administradores. En youtube.com: tu foto > "Crear un canal" > usar un nombre personalizado. Así podrás sumar un editor sin darle tu contraseña.
+4. **Nombre del canal.** Corto, fácil de escribir, que sugiera el tema. Búscalo antes en YouTube, Instagram y TikTok para ver que esté libre.
+5. **Handle (identificador).** Tu "@nombre" (por ejemplo @recetasbaratas), que forma la URL youtube.com/@recetasbaratas. Se cambia en YouTube Studio > Personalización. Que coincida con tus otras redes.
 
 ### 2.3 Identidad visual
 
@@ -74,13 +74,11 @@ En Configuración > Canal agrega 5 a 10 **palabras clave del canal** (pesan poco
 
 ### 2.5 Verificación: funciones intermedias y avanzadas
 
-YouTube desbloquea funciones por niveles:
+1. **Funciones estándar:** al crear el canal. Videos de hasta 15 minutos.
+2. **Funciones intermedias:** verificas tu teléfono (YouTube Studio > Configuración > Canal > Acceso a funciones) con un código por SMS o llamada. Desbloquean **videos de más de 15 minutos, miniaturas personalizadas y transmisiones en vivo.** Hazlo el primer día: sin miniaturas propias es muy difícil crecer.
+3. **Funciones avanzadas:** además del teléfono, necesitas historial suficiente en el canal o verificar con documento de identidad o video. Incluyen fijar comentarios y más subidas diarias, entre otras.
 
-1. **Funciones estándar:** las tienes al crear el canal. Puedes subir videos de hasta 15 minutos.
-2. **Funciones intermedias:** se activan verificando tu número de teléfono (YouTube Studio > Configuración > Canal > Acceso a funciones). Te llega un código por SMS o llamada. Desbloquean: **videos de más de 15 minutos, miniaturas personalizadas y transmisiones en vivo.** Hazlo el primer día. Sin miniaturas personalizadas es muy difícil crecer.
-3. **Funciones avanzadas:** necesitas la verificación por teléfono y además historial suficiente en el canal (tiempo publicando sin problemas) o una verificación con documento de identidad o video. Incluyen fijar comentarios y límites diarios de subida más altos, entre otras.
-
-Ojo: un mismo número de teléfono no puede verificar más de 2 canales por año.
+Un mismo teléfono puede verificar como máximo 2 canales por año.
 
 > **Tarea:** Crea tu cuenta de marca, activa la verificación en 2 pasos, verifica tu teléfono, sube foto, banner y descripción. Escribe en una hoja el nicho elegido y 30 ideas de videos.
 
@@ -100,7 +98,7 @@ La calidad de imagen importa menos de lo que crees. **El audio importa más que 
 | **Soporte** | Libros apilados | Trípode con soporte para celular | Que no se mueva la imagen. |
 | **Sonido del ambiente** | Habitación con ropa, cortinas, almohadones | — | Las paredes vacías hacen eco. Un placard abierto lleno de ropa es una cabina de grabación casera. |
 
-No pude verificar precios actuales en cada país. Como referencia, el equipo barato completo (micrófono corbatero, aro de luz y trípode) suele costar el equivalente a unos pocos decenas de dólares en Mercado Libre o tiendas similares. Compra solo cuando ya hayas publicado tus primeros 3 videos y sepas que vas a seguir.
+No pude verificar precios actuales por país; como referencia, el kit barato (corbatero, aro de luz y trípode) suele costar algunas decenas de dólares en Mercado Libre. Compra solo después de publicar tus primeros 3 videos.
 
 ### 3.2 Software gratuito
 
@@ -134,21 +132,17 @@ Un camino intermedio: empezar sin cara (pantalla, manos, voz) y aparecer de a po
 
 Esto es clave si piensas hacer un canal sin cara o usar inteligencia artificial (IA).
 
-- **Qué cambió:** desde el **15 de julio de 2025**, YouTube renombró la política de "contenido repetitivo" como **"contenido inauténtico"** (inauthentic content). No es una prohibición nueva: YouTube aclaró que este tipo de contenido ya no podía monetizarse desde hacía años. Lo que hizo fue precisar la definición y anunciar que la aplicará con más fuerza.
-- **Qué se considera inauténtico:** contenido **producido en masa o repetitivo**, que los espectadores suelen percibir como spam. Ejemplos citados: canales que suben historias narradas casi idénticas, o presentaciones de diapositivas con la misma narración repetida, con muy poca variación o valor agregado.
-- **Qué NO apunta a prohibir:** YouTube aclaró que la actualización no está dirigida específicamente a canales de reacciones o de clips, siempre que agreguen comentario, análisis o valor propio.
-- **La IA está permitida.** Usar herramientas de IA no te descalifica automáticamente para monetizar. Lo que se penaliza es el contenido masivo y sin aporte, se haga con IA o sin ella.
-- **La sanción es para todo el canal.** Si YouTube considera que tu canal viola esta política, puede quitarle la monetización al canal entero, no solo a un video.
+- **Qué cambió:** desde el **15 de julio de 2025**, la política de "contenido repetitivo" se llama **"contenido inauténtico"**. No es una prohibición nueva (ese contenido ya no se podía monetizar hace años): YouTube precisó la definición y anunció que la aplicará con más fuerza.
+- **Qué es inauténtico:** contenido **producido en masa o repetitivo**, que se percibe como spam. Ejemplos citados: historias narradas casi idénticas, o diapositivas con la misma narración, con poca variación o valor agregado.
+- **Qué no apunta a prohibir:** canales de reacciones o clips que agregan comentario o análisis propio.
+- **La IA está permitida.** Usarla no te descalifica. Se penaliza el contenido masivo y sin aporte, con IA o sin ella.
+- **La sanción es para todo el canal:** YouTube puede quitarle la monetización al canal entero.
 
 ### 4.3 Etiqueta de contenido alterado o sintético (IA realista)
 
-Si tu video muestra algo **realista** creado o modificado de forma importante con IA (una persona que dice algo que no dijo, un lugar o un hecho que parece real y no lo es), debes indicarlo al subir el video. En YouTube Studio, al subir, aparece la pregunta sobre "contenido alterado o sintético": marca "Sí" cuando corresponda.
+Si tu video muestra algo **realista** creado o modificado de forma importante con IA (una persona diciendo algo que no dijo, un hecho que parece real y no lo es), al subirlo responde "Sí" a la pregunta de "contenido alterado o sintético". No hace falta declarar contenido claramente irreal ni retoques menores (filtros, color, guion asistido por IA). Según YouTube, declararlo **no limita el alcance ni la monetización**. YouTube también puede poner la etiqueta por su cuenta; en mayo de 2026 anunció que la mostrará en un lugar más visible.
 
-- No hace falta declarar contenido claramente irreal (por ejemplo, una animación fantástica) ni retoques menores (filtros, corrección de color, guion asistido por IA).
-- Según YouTube, declararlo **no limita el alcance ni la monetización** del video.
-- YouTube puede poner la etiqueta por su cuenta si detecta contenido que podría confundir. En mayo de 2026 anunció que esa etiqueta se mostrará en un lugar más visible para el contenido fotorrealista.
-
-**Regla de oro:** si usas IA, úsala como herramienta (para investigar, ordenar ideas, hacer imágenes de apoyo), no como fábrica. Tu guion, tu opinión y tu análisis tienen que estar en cada video.
+**Regla de oro:** usa la IA como herramienta (investigar, ordenar ideas, imágenes de apoyo), no como fábrica. Tu guion, tu opinión y tu análisis tienen que estar en cada video.
 
 > **Tarea:** Decide: ¿con cara, sin cara o intermedio? Escribe en una línea qué valor propio vas a agregar en cada video (tu experiencia, tu opinión, tus pruebas, tu investigación). Si no puedes escribirla, revisa tu nicho.
 
@@ -186,32 +180,24 @@ Si tu video muestra algo **realista** creado o modificado de forma importante co
 
 ### 6.1 Idea
 
-Buenas fuentes de ideas:
-
-1. Sugerencias automáticas del buscador de YouTube (escribe tu tema y mira qué completa).
-2. Videos de canales pequeños de tu nicho que tienen muchas más vistas que suscriptores: ese tema interesa.
-3. Comentarios de otros videos: preguntas que nadie respondió bien.
-4. La pestaña **Investigación** o **Inspiración** de YouTube Studio (si te aparece), que muestra qué busca tu audiencia.
+Busca ideas en las sugerencias automáticas del buscador de YouTube, en videos de canales chicos de tu nicho con muchas más vistas que suscriptores (ese tema interesa), en preguntas sin buena respuesta en los comentarios, y en la pestaña de **Investigación/Inspiración** de YouTube Studio si te aparece.
 
 ### 6.2 Título
 
-- Menos de 60 caracteres para que no se corte.
-- Una promesa clara y concreta: "Cómo cocinar para toda la semana con poca plata" funciona mejor que "Mi rutina de cocina".
-- Incluye la palabra que la gente busca, al principio si se puede.
-- Escribe 10 títulos y elige el mejor. Parece exagerado; no lo es.
+- Menos de 60 caracteres, con una promesa concreta: "Cómo cocinar para toda la semana con poca plata" funciona mejor que "Mi rutina de cocina".
+- La palabra que la gente busca, al principio si se puede.
+- Escribe 10 títulos y elige el mejor.
 
 ### 6.3 Miniatura
 
 La **miniatura** es la imagen que representa tu video. Junto con el título, decide el clic.
 
-- Una sola idea por miniatura. Máximo 3 o 4 palabras de texto, grandes.
-- Contraste fuerte: fondo simple, sujeto claro.
-- Si apareces: cara expresiva, mirando a cámara o al objeto.
+- Una sola idea; máximo 3 o 4 palabras grandes; fondo simple y contraste fuerte.
+- Si apareces: cara expresiva.
 - Que **complemente** al título, no que lo repita.
-- Mírala en tamaño chiquito (como en el celular). Si no se entiende, simplifica.
-- Medidas: 1280 x 720 px, formato JPG o PNG.
+- Mírala en tamaño chiquito, como en el celular. Medidas: 1280 x 720 px.
 
-YouTube Studio tiene una función de **prueba A/B** ("Probar y comparar"): subes hasta 3 títulos y miniaturas, y al final YouTube deja la versión que logró más tiempo de visualización. No está disponible para Shorts. Úsala cuando ya tengas algo de tráfico.
+La **prueba A/B** de YouTube Studio te deja subir hasta 3 títulos y miniaturas; al final queda la versión con más tiempo de visualización. No funciona en Shorts.
 
 ### 6.4 Guion
 
@@ -292,14 +278,13 @@ En YouTube Studio > Crear > Subir videos:
    8:45 Cómo guardar la comida
    ```
    Se necesitan al menos 3 capítulos, en orden, y de al menos 10 segundos cada uno.
-4. **Miniatura personalizada.**
-5. **Lista de reproducción:** agrúpalo con otros videos del mismo tema.
-6. **Público:** indica si es "creado para niños" o no. Es obligatorio y legalmente importante. Si tu contenido no está dirigido a niños, marca "No".
-7. **Contenido alterado o sintético:** responde con honestidad (ver sección 4.3).
-8. **Etiquetas:** pesan muy poco. Pon 3 a 5, sobre todo variantes o errores comunes de escritura de tu palabra clave.
-9. **Pantalla final:** en los últimos 5 a 20 segundos agrega un elemento a otro video tuyo y el botón de suscripción. Deja esos segundos "libres" en la edición para que los elementos no tapen nada importante.
-10. **Tarjetas:** avisos que aparecen durante el video para recomendar otro video.
-11. **Programa la publicación** para un día y hora fijos. La constancia ayuda a que tu público te espere.
+3. **Miniatura personalizada** y **lista de reproducción** del tema.
+4. **Público:** indica si es "creado para niños". Es obligatorio y legalmente importante; si no está dirigido a niños, marca "No".
+5. **Contenido alterado o sintético:** responde con honestidad (sección 4.3).
+6. **Etiquetas:** pesan muy poco. Pon 3 a 5 variantes de tu palabra clave.
+7. **Pantalla final:** en los últimos 5 a 20 segundos, un elemento a otro video tuyo y el botón de suscripción. Deja esos segundos "libres" en la edición.
+8. **Tarjetas:** avisos durante el video que recomiendan otro video.
+9. **Programa la publicación** para un día y hora fijos.
 
 > **Tarea:** Produce tu primer video completo usando la plantilla. No busques que sea perfecto: busca terminarlo. Publícalo.
 
@@ -311,20 +296,18 @@ Al principio nadie te conoce, así que el inicio y las sugerencias casi no te va
 
 | N.° | Tipo de video | Ejemplo (nicho: cocina barata) | Por qué |
 |---|---|---|---|
-| 1 | Tutorial de búsqueda | "Cómo hacer arroz que no se pegue" | La gente lo busca todos los días. |
-| 2 | Tutorial de búsqueda | "Qué cocinar con 3 huevos y una papa" | Otra pregunta concreta. |
-| 3 | Errores comunes | "5 errores al cocinar para toda la semana" | Los títulos de errores generan curiosidad. |
-| 4 | Guía para principiantes | "Cocina desde cero: lo que necesitas comprar" | Pieza central que vas a enlazar desde otros videos. |
-| 5 | Comparación | "Arroz en olla vs arrocera: ¿vale la pena?" | Las comparaciones se buscan antes de decidir una compra (y sirven luego para afiliados). |
-| 6 | Lista | "7 comidas por menos de [monto] por porción" | Fácil de ver, bueno para compartir. |
-| 7 | Experiencia propia | "Cociné solo una vez por semana durante un mes" | Muestra tu personalidad; conecta. |
-| 8 | Respuesta a una pregunta | Responder un comentario o una pregunta frecuente del nicho | Demuestra que escuchas. |
-| 9 | Tutorial de búsqueda | Otro tema muy buscado | Más puertas de entrada desde el buscador. |
-| 10 | Repetir el que mejor funcionó | Una segunda parte o variación del video con más vistas | Haces más de lo que tu audiencia ya demostró que quiere. |
+| 1 | Tutorial de búsqueda | "Cómo hacer arroz que no se pegue" | Se busca todos los días. |
+| 2 | Tutorial de búsqueda | "Qué cocinar con 3 huevos y una papa" | Pregunta concreta. |
+| 3 | Errores comunes | "5 errores al cocinar para toda la semana" | Genera curiosidad. |
+| 4 | Guía para principiantes | "Cocina desde cero: qué comprar" | Pieza central para enlazar. |
+| 5 | Comparación | "Arroz en olla vs arrocera" | Se busca antes de comprar; sirve para afiliados. |
+| 6 | Lista | "7 comidas por menos de [monto]" | Fácil de ver y compartir. |
+| 7 | Experiencia propia | "Cociné una vez por semana durante un mes" | Muestra tu personalidad. |
+| 8 | Respuesta a una pregunta | Pregunta frecuente del nicho | Demuestra que escuchas. |
+| 9 | Tutorial de búsqueda | Otro tema muy buscado | Otra puerta desde el buscador. |
+| 10 | Repetir el que mejor funcionó | Segunda parte del video con más vistas | Das más de lo que ya funcionó. |
 
-Además, corta 2 o 3 Shorts de cada uno.
-
-**Por qué 10:** con menos de 10 videos no tienes datos suficientes para saber qué funciona. Y cada video que haces es práctica: el video 10 va a ser mucho mejor que el 1.
+Corta 2 o 3 Shorts de cada uno. **¿Por qué 10?** Con menos no tienes datos para saber qué funciona, y el video 10 va a ser mucho mejor que el 1.
 
 > **Tarea:** Adapta esta tabla a tu nicho. Escribe los 10 títulos.
 
@@ -338,12 +321,10 @@ El **Programa de Socios de YouTube** (YPP, por sus siglas en inglés) es lo que 
 
 #### Requisitos comunes a los dos niveles
 
-- Vivir en un país donde el programa está disponible.
-- Tener activada la **verificación en 2 pasos** en tu cuenta de Google.
-- **No tener faltas activas** por incumplir los Lineamientos de la Comunidad.
-- Cumplir las políticas de monetización (incluida la de contenido inauténtico).
-- Tener o crear una cuenta de **AdSense** (la explicamos abajo).
-- **Postularte**: cumplir los números no te inscribe solo. YouTube revisa tu canal (personas que miran tus videos) y puede aceptar o rechazar. Si te rechazan, puedes volver a postularte más adelante.
+- Vivir en un país habilitado y tener la **verificación en 2 pasos** activa.
+- **No tener faltas activas** por los Lineamientos de la Comunidad y cumplir las políticas de monetización.
+- Tener una cuenta de **AdSense** (ver 8.2).
+- **Postularte:** cumplir los números no te inscribe solo. Personas de YouTube revisan tu canal y pueden aceptarlo o rechazarlo; si te rechazan, puedes volver a intentarlo más adelante.
 
 #### Nivel 1: acceso anticipado (expanded YPP)
 
@@ -365,49 +346,42 @@ YouTube anunció en agosto de 2026 que los requisitos para estas funciones (fina
 | Horas de reproducción públicas válidas (videos largos, últimos 365 días) | 4000 | **8000** |
 | **o** vistas públicas válidas de Shorts (últimos 90 días) | 10 millones | **20 millones** |
 
-Esto es importante para ti. El 10 de agosto de 2026, YouTube anunció en su blog oficial que **duplica** los umbrales de horas y de vistas de Shorts para entrar a los ingresos por anuncios, a partir del **1 de febrero de 2027**. Los canales que ya están en el programa conservan su lugar. Si empiezas hoy desde cero, lo más realista es que llegues a postularte después de esa fecha, así que **planifica con los números nuevos: 1000 suscriptores y 8000 horas (o 20 millones de vistas de Shorts).**
+Esto es importante para ti. El 10 de agosto de 2026, YouTube anunció en su blog oficial que **duplica** estos umbrales desde el **1 de febrero de 2027**. Los canales que ya están dentro conservan su lugar. Si empiezas hoy desde cero, lo realista es que te postules después de esa fecha: **planifica con 1000 suscriptores y 8000 horas (o 20 millones de vistas de Shorts).**
 
-Detalles que confunden a todos:
+Detalles que confunden:
 
-- "Públicas válidas" quiere decir que **no cuentan** las horas de videos privados, ocultos, borrados, ni las de Shorts. Tampoco las vistas artificiales.
-- Reparto de ingresos: según lo informado cuando se lanzó el modelo en 2023, el creador recibe el **55%** de los ingresos por anuncios en videos largos y el **45%** de su parte del fondo de Shorts. No pude confirmar estos porcentajes en una página oficial vigente.
-- También desde febrero de 2027, para cobrar la parte de anuncios de Shorts cada mes, YouTube exigirá mantener **10 millones de vistas válidas de Shorts en los últimos 90 días**. Esto afecta solo a la monetización de Shorts, no a la de videos largos.
+- "Públicas válidas": **no cuentan** horas de videos privados, ocultos o borrados, ni de Shorts, ni vistas artificiales.
+- Reparto: según lo informado en 2023, el creador recibe el **55%** de los anuncios en videos largos y el **45%** de su parte del fondo de Shorts. No pude confirmarlo en una página oficial vigente.
+- Desde febrero de 2027, para cobrar anuncios de Shorts cada mes habrá que mantener **10 millones de vistas válidas de Shorts en 90 días** (no afecta a los videos largos).
 
 #### Países habilitados
 
-**Argentina está confirmada** tanto en la lista de disponibilidad del YPP como en la del programa ampliado (nivel de 500 suscriptores). También figuran, entre otros, México, Chile, Colombia, Perú, Bolivia, Uruguay, Paraguay, Ecuador y la mayoría de Latinoamérica. Para **Venezuela** no pude confirmar en fuentes oficiales que esté en la lista del programa ampliado. Revisa la página "Disponibilidad del Programa de socios de YouTube" (enlace en Fuentes) para tu país.
+**Argentina está confirmada** en la lista del YPP y en la del programa ampliado (nivel de 500). En las fuentes oficiales también aparecen Bolivia, Chile, Colombia y Perú, y las guías incluyen a México y Ecuador. Para **Venezuela** no pude confirmar que esté en el programa ampliado. Revisa tu país en la página "Disponibilidad del Programa de socios de YouTube" (ver Fuentes).
 
 ### 8.2 AdSense: la cuenta por donde cobras
 
-**AdSense** es el sistema de pagos de Google. YouTube deposita ahí lo que ganas y AdSense te lo transfiere. Se crea desde YouTube Studio > Ganar dinero, cuando te postulas.
+**AdSense** es el sistema de pagos de Google: YouTube deposita ahí lo que ganas y AdSense te lo transfiere. Se crea desde YouTube Studio > Ganar dinero.
 
-Cómo funciona el cobro:
-
-1. **Verificación de identidad y dirección.** Cuando acumulas **US$10**, Google te manda por correo postal una carta con un **PIN** (código de 6 dígitos). Puede tardar 3 a 4 semanas. Tienes 4 meses para ingresarlo. Si lo ingresas mal 3 veces, pierdes la monetización. Pon tu dirección completa y exacta.
-2. **Método de pago.** Al llegar a US$10 eliges cómo cobrar.
-3. **Umbral de pago: US$100.** Google te paga cuando tu saldo supera los US$100. Si cierras un mes por encima de ese monto, el pago se procesa el mes siguiente (en los ejemplos de Google, alrededor del día 21 al 26).
-4. **Tiempos:** una transferencia electrónica tarda de 4 a 10 días; una transferencia bancaria internacional, hasta 15 días hábiles.
+1. **PIN de verificación.** Al acumular **US$10**, Google te manda por correo postal un código de 6 dígitos (tarda 3 a 4 semanas; tienes 4 meses para ingresarlo; 3 errores y pierdes la monetización). Pon tu dirección exacta.
+2. **Método de pago:** lo eliges al llegar a US$10.
+3. **Umbral de pago: US$100.** Si cierras un mes por encima, te pagan durante el mes siguiente (en los ejemplos de Google, hacia el día 21 a 26). La transferencia puede tardar hasta 15 días hábiles más.
 
 #### Cómo cobrar en Argentina
 
-- **Transferencia a tu cuenta bancaria argentina:** AdSense pide tu **CBU** (22 dígitos). Pregunta en tu banco cómo recibe transferencias del exterior y si puedes acreditarlas en una cuenta en dólares. Pide la información sobre comisiones.
-- **Hyperwallet:** desde octubre de 2025, Google permite a los usuarios de Argentina recibir los pagos de AdSense en una cuenta de **Hyperwallet** (una billetera de pagos). Mira si la opción te aparece en la configuración de pagos.
-- **Dólares:** según fuentes del sector financiero (no lo pude confirmar en la normativa del Banco Central), en 2026 las personas que exportan servicios pueden quedarse con los dólares sin convertirlos a pesos, siempre que se acrediten en una **cuenta en moneda extranjera a su nombre en un banco local**. Muchas billeteras virtuales no son bancos locales y no cuentan. Confírmalo con tu banco.
-- **Impuestos en Argentina:** cobrar del exterior no te exime de inscribirte ante ARCA (ex AFIP), por ejemplo como monotributista, ni de facturar (en general, como exportación de servicios). **Consulta con un contador** antes de tu primer cobro. Es plata bien gastada.
+- **Banco argentino:** AdSense pide tu **CBU**. Pregunta en tu banco cómo recibe transferencias del exterior, si puedes acreditarlas en tu cuenta en dólares y qué comisiones cobra.
+- **Hyperwallet:** desde octubre de 2025 Google permite a usuarios de Argentina cobrar en una cuenta de **Hyperwallet** (billetera de pagos). Mira si te aparece la opción.
+- **Dólares:** según fuentes financieras (no lo confirmé en la normativa del Banco Central), en 2026 una persona que exporta servicios puede quedarse con los dólares sin pasarlos a pesos si se acreditan en una **cuenta en dólares a su nombre en un banco local**. Muchas billeteras virtuales no cuentan como banco local.
+- **Impuestos:** debes estar inscripto ante ARCA (ex AFIP), por ejemplo como monotributista, y facturar (en general, como exportación de servicios). **Consulta con un contador** antes del primer cobro.
 
 #### Cómo cobrar en el resto de Latinoamérica
 
-- La opción más común es la transferencia a tu cuenta bancaria local, en moneda local o en dólares según el país y el banco.
-- Revisa en AdSense qué métodos aparecen para tu país. Varía de país en país.
-- Cada país tiene sus propias reglas de impuestos y facturación. Consulta con un contador local.
+Lo más común es la transferencia a tu banco local, en moneda local o en dólares según el país. Revisa qué métodos te ofrece AdSense y consulta a un contador local por los impuestos.
 
 ### 8.3 Impuestos de EE.UU. y el formulario W-8BEN
 
 YouTube es una empresa estadounidense. Por eso, aunque vivas en Latinoamérica, **Google retiene impuestos de EE.UU. sobre lo que ganas con espectadores de Estados Unidos.**
 
-1. Ve a AdSense para YouTube > Pagos > Administrar configuración > Información fiscal de EE.UU.
-2. Si eres persona (no empresa), completa el **formulario W-8BEN**: declara que no eres residente de EE.UU. Es en línea y lleva unos minutos.
-3. Qué pasa según lo que hagas:
+En AdSense para YouTube > Pagos > Administrar configuración > Información fiscal de EE.UU., completa el **formulario W-8BEN** (si eres persona, no empresa): declaras que no eres residente de EE.UU. Es en línea y lleva minutos.
 
 | Situación | Retención |
 |---|---|
@@ -451,8 +425,6 @@ Dato honesto: para un canal pequeño en español, muchas veces **los afiliados, 
 | **Retención de la audiencia** (gráfico) | Dentro de cada video > Participación | En qué segundo se va la gente | Mira las caídas bruscas: ahí algo falló. Las subidas indican partes que la gente vuelve a ver: haz más de eso. |
 | **Fuentes de tráfico** | Estadísticas > Alcance | De dónde llegan las vistas (búsqueda, inicio, sugeridos, Shorts) | Te dice qué está funcionando. |
 | **Suscriptores por video** | Estadísticas > Audiencia | Qué videos convierten espectadores en suscriptores | Haz más videos de ese tipo. |
-| **Espectadores recurrentes vs nuevos** | Estadísticas > Audiencia | Si la gente vuelve | Muchos nuevos y pocos recurrentes: falta constancia o series. |
-| **Cuándo están conectados tus espectadores** | Estadísticas > Audiencia | Días y horas de mayor actividad | Programa tus videos un par de horas antes de ese pico. |
 
 ### 9.2 Cómo diagnosticar un video
 
@@ -495,20 +467,17 @@ Al terminar tendrás unos **12 videos largos y 25 a 35 Shorts**. Eso es una base
 
 ## 11. Errores comunes de principiantes
 
-1. **Esperar resultados en semanas.** Lo normal es que los primeros videos tengan muy pocas vistas. No significa que lo hagas mal.
-2. **Cambiar de tema todo el tiempo.** YouTube no sabe a quién mostrarte y tus suscriptores no saben qué esperar.
-3. **Gastar en equipo antes de publicar.** El equipo no hace el canal. Los primeros 10 videos se hacen con el celular.
-4. **Introducciones largas.** "Hola a todos, bienvenidos..." durante 40 segundos. La gente se va.
-5. **Miniaturas ilegibles.** Mucho texto, letras chicas, imágenes confusas.
-6. **Mal audio.** Eco, ruido, micrófono lejos.
-7. **Clickbait.** Promesas que el video no cumple: suben los clics y bajan la retención y la satisfacción.
-8. **Comprar suscriptores, vistas o usar "sub4sub"** (yo te sigo, tú me sigues). Viola las políticas, ensucia tus estadísticas y puede costarte el canal. Esos suscriptores no miran tus videos y eso hunde tus métricas.
-9. **Usar música, clips o imágenes con derechos de autor.** Te pueden reclamar los ingresos, bloquear el video o darte un **aviso de derechos de autor** (strike). Con 3 avisos activos, YouTube cierra el canal.
-10. **Hacer contenido masivo con IA sin aporte propio.** Es exactamente lo que la política de contenido inauténtico penaliza, y la sanción es para todo el canal.
-11. **No completar el W-8BEN.** Pierdes hasta el 24% de todo lo que ganas.
-12. **Mirarse con canales gigantes.** Compárate con tu video anterior, no con alguien que lleva 8 años.
-13. **No revisar estadísticas, o revisarlas todo el día.** Una vez por semana alcanza.
-14. **Abandonar en el mes 2 o 3.** Es justo cuando muchos canales empiezan a ver sus primeros resultados.
+1. **Esperar resultados en semanas.** Los primeros videos casi siempre tienen muy pocas vistas. No significa que lo hagas mal.
+2. **Cambiar de tema todo el tiempo.** YouTube no sabe a quién mostrarte.
+3. **Gastar en equipo antes de publicar.** Los primeros 10 videos se hacen con el celular.
+4. **Introducciones largas y mal audio.** Las dos razones más rápidas para que la gente se vaya.
+5. **Miniaturas ilegibles** y **clickbait** que el video no cumple.
+6. **Comprar suscriptores o vistas, o hacer "sub4sub"** (yo te sigo, tú me sigues). Viola las políticas y esos suscriptores, que no miran tus videos, hunden tus métricas.
+7. **Usar música, clips o imágenes con derechos de autor.** Te pueden quitar ingresos o darte un **aviso de derechos de autor** (strike). Con 3 avisos activos, YouTube cierra el canal.
+8. **Contenido masivo con IA sin aporte propio.** Es lo que penaliza la política de contenido inauténtico, y la sanción es para todo el canal.
+9. **No completar el W-8BEN.** Pierdes hasta el 24% de todo lo que ganas.
+10. **Compararte con canales gigantes** o mirar estadísticas cada hora. Compárate con tu video anterior, una vez por semana.
+11. **Abandonar en el mes 2 o 3**, justo cuando muchos canales empiezan a ver resultados.
 
 ---
 
