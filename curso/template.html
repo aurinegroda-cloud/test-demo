@@ -1,0 +1,186 @@
+<title>Creador desde Cero</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: cuaderno de curso — índice fijo a la izquierda, un capítulo por vez, tareas marcables como resaltador */
+:root{
+  --bg:#f5f7f3; --surface:#ffffff; --ink:#14201b; --muted:#56655e; --line:#dce2db;
+  --accent:#16705a; --accent-ink:#ffffff; --accent-soft:rgba(22,112,90,.09);
+  --mark:#fff0b3; --mark-line:#e8cf63; --mark-ink:#3f3300; --code:#edf1eb;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1412; --surface:#151d1a; --ink:#e2eae6; --muted:#93a29b; --line:#25302c;
+    --accent:#5ec4a4; --accent-ink:#0b1a15; --accent-soft:rgba(94,196,164,.12);
+    --mark:rgba(255,222,120,.12); --mark-line:rgba(255,222,120,.45); --mark-ink:#ffe6a0; --code:#1a2420; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1412; --surface:#151d1a; --ink:#e2eae6; --muted:#93a29b; --line:#25302c;
+  --accent:#5ec4a4; --accent-ink:#0b1a15; --accent-soft:rgba(94,196,164,.12);
+  --mark:rgba(255,222,120,.12); --mark-line:rgba(255,222,120,.45); --mark-ink:#ffe6a0; --code:#1a2420; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:24px}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.65}
+.shell{display:grid;grid-template-columns:290px minmax(0,1fr);max-width:1320px;margin:0 auto;gap:48px;
+  padding-block:28px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.shell{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+
+/* Índice */
+.side{position:sticky;top:calc(24px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 48px);overflow-y:auto;padding-right:4px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.02;letter-spacing:-.01em;margin:0}
+.brand span{color:var(--accent)}
+.brand-sub{font-size:13px;color:var(--muted);margin:8px 0 18px}
+.overall{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);margin-bottom:18px}
+.bar{flex:1;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.toc{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.toc a{color:inherit;text-decoration:none}
+.toc .ch{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;padding:7px 8px;border-radius:6px;font-weight:500;font-size:14.5px}
+.toc .ch:hover{background:var(--accent-soft)}
+.toc .ch .n{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+.toc .ch .c{font-family:var(--f-mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.toc .ch.done .c{color:var(--accent)}
+.toc li.on > .ch{background:var(--surface);box-shadow:0 0 0 1px var(--line)}
+.toc li.on > .ch .n{color:var(--accent)}
+.sub{list-style:none;margin:4px 0 8px 42px;padding:0;display:none;border-left:1px solid var(--line)}
+.toc li.on .sub{display:block}
+.sub a{display:block;font-size:13px;color:var(--muted);padding:3px 0 3px 12px;line-height:1.35}
+.sub a:hover{color:var(--ink)}
+@media (max-width:900px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:20px}
+  .side{position:static;max-height:none;overflow:visible}
+  .toc{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px;scrollbar-width:thin}
+  .toc li{flex:none}
+  .toc .ch{grid-template-columns:auto auto;border:1px solid var(--line);background:var(--surface)}
+  .toc .ch .c{display:none}
+  .sub{display:none!important}
+}
+
+/* Capítulo */
+main{min-width:0}
+.chapter{max-width:760px}
+.ch-head{padding-bottom:22px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;color:var(--muted);margin:0 0 10px;text-transform:uppercase}
+.ch-head h1{font-family:var(--f-display);font-weight:800;font-size:clamp(32px,5vw,52px);line-height:1.02;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.prose h2{font-family:var(--f-display);font-weight:700;font-size:clamp(23px,3vw,29px);line-height:1.15;margin:46px 0 12px;text-wrap:balance;letter-spacing:-.005em}
+.prose h3{font-family:var(--f-display);font-weight:700;font-size:19.5px;margin:30px 0 8px;text-wrap:balance}
+.prose h4{font-size:16px;margin:22px 0 6px}
+.prose p,.prose li{max-width:68ch}
+.prose ul,.prose ol{padding-left:24px}
+.prose li{margin:4px 0}
+.prose li::marker{color:var(--accent);font-weight:600}
+.prose a{color:var(--accent);text-underline-offset:2px}
+.prose strong{font-weight:600}
+.prose hr{border:0;border-top:1px solid var(--line);margin:36px 0}
+.prose code{font-family:var(--f-mono);font-size:.86em;background:var(--code);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+.prose pre{background:var(--code);border-radius:8px;padding:16px 18px;overflow-x:auto;font-size:13px;line-height:1.5}
+.prose pre code{background:none;padding:0;font-size:inherit;overflow-wrap:normal}
+.prose blockquote{margin:20px 0;padding:12px 18px;border-radius:8px;background:var(--accent-soft);color:var(--ink)}
+.prose blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.tw table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.45}
+.tw th,.tw td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line);min-width:110px}
+.tw th{font-size:12px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--bg)}
+.tw tr:last-child td{border-bottom:0}
+
+/* Tareas: resaltador */
+.task{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;margin:24px 0;padding:14px 16px;border-radius:8px;
+  background:var(--mark);border:1px solid var(--mark-line);color:var(--ink)}
+.task input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--accent);cursor:pointer}
+.task-k{display:inline-block;font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mark-ink);margin-bottom:2px}
+.task-body p{margin:2px 0}
+.task.is-done{background:var(--surface);border-color:var(--line)}
+.task.is-done .task-body{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--muted)}
+
+/* Paginador */
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:56px;padding-top:22px;border-top:1px solid var(--line)}
+.pager a{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);background:var(--surface)}
+.pager a:hover{border-color:var(--accent)}
+.pager a span{font-size:12px;color:var(--muted);font-family:var(--f-mono);text-transform:uppercase;letter-spacing:.05em}
+.pager a strong{font-family:var(--f-display);font-size:18px}
+.pager a.next{text-align:right;grid-column:2}
+a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+</style>
+
+<div class="shell">
+  <aside class="side" aria-label="Índice del curso">
+    <p class="brand">Creador<br>desde <span>cero</span></p>
+    <p class="brand-sub">{{N_CH}} capítulos · {{TOTAL_TASKS}} tareas · YouTube, TikTok, Instagram, Hotmart y Shopify · Actualizado el 28 de noviembre de 2026</p>
+    <div class="overall"><div class="bar"><i id="overallBar"></i></div><span id="overallTxt">0 de {{TOTAL_TASKS}}</span></div>
+    <ul class="toc" id="toc"></ul>
+  </aside>
+  <main id="main">
+{{SECTIONS}}
+  </main>
+</div>
+
+<script>
+const NAV = {{NAV}};
+const TOTAL = {{TOTAL_TASKS}};
+const KEY = 'creador-cero-tareas';
+let done = {};
+try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} };
+
+const toc = document.getElementById('toc');
+toc.innerHTML = NAV.map(c => `<li data-slug="${c.slug}">
+  <a class="ch" href="#${c.slug}"><span class="n">${String(c.n).padStart(2,'0')}</span><span>${c.label}</span><span class="c" data-c="${c.slug}"></span></a>
+  <ul class="sub">${c.toc.map(t => `<li><a href="#${t.id}">${t.name}</a></li>`).join('')}</ul></li>`).join('');
+
+document.querySelectorAll('.pager').forEach(p => {
+  const i = NAV.findIndex(c => c.n === +p.dataset.i);
+  const prev = NAV[i-1], next = NAV[i+1];
+  p.innerHTML = (prev ? `<a href="#${prev.slug}"><span>Anterior</span><strong>${prev.label}</strong></a>` : '<div></div>')
+              + (next ? `<a class="next" href="#${next.slug}"><span>Siguiente</span><strong>${next.label}</strong></a>` : '');
+});
+
+function refreshProgress(){
+  let all = 0;
+  NAV.forEach(c => {
+    let k = 0;
+    for (let n = 1; n <= c.tasks; n++) if (done[`t-${c.slug}-${n}`]) k++;
+    all += k;
+    const el = document.querySelector(`[data-c="${c.slug}"]`);
+    if (el) el.textContent = c.tasks ? `${k}/${c.tasks}` : '';
+    const li = el && el.closest('.ch'); if (li) li.classList.toggle('done', c.tasks > 0 && k === c.tasks);
+    const pr = document.querySelector(`.ch-prog[data-ch="${c.slug}"]`);
+    if (pr) pr.textContent = c.tasks ? `${k} de ${c.tasks} tareas hechas` : 'sin tareas';
+  });
+  document.getElementById('overallBar').style.width = (TOTAL ? 100*all/TOTAL : 0) + '%';
+  document.getElementById('overallTxt').textContent = `${all} de ${TOTAL} tareas`;
+}
+document.querySelectorAll('.task input').forEach(cb => {
+  cb.checked = !!done[cb.id];
+  cb.closest('.task').classList.toggle('is-done', cb.checked);
+  cb.addEventListener('change', () => {
+    if (cb.checked) done[cb.id] = 1; else delete done[cb.id];
+    cb.closest('.task').classList.toggle('is-done', cb.checked);
+    save(); refreshProgress();
+  });
+});
+refreshProgress();
+
+const sections = [...document.querySelectorAll('.chapter')];
+function route(){
+  const h = decodeURIComponent(location.hash.slice(1));
+  let target = h ? document.getElementById(h) : null;
+  let sec = target ? (target.classList.contains('chapter') ? target : target.closest('.chapter')) : null;
+  if (!sec) sec = sections[0];
+  sections.forEach(s => { s.hidden = s !== sec; });
+  document.querySelectorAll('#toc > li').forEach(li => li.classList.toggle('on', li.dataset.slug === sec.id));
+  if (target && target !== sec) target.scrollIntoView({ block:'start' });
+  else window.scrollTo(0, 0);
+  const onLi = document.querySelector('#toc > li.on');
+  if (onLi && matchMedia('(max-width:900px)').matches) onLi.scrollIntoView({ block:'nearest', inline:'center' });
+}
+window.addEventListener('hashchange', route);
+route();
+</script>
