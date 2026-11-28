@@ -272,11 +272,11 @@ Para ver qué tienes habilitado, entra en **Panel profesional > Estado de moneti
 
 **Suscripciones.** Tus seguidores pagan una cuota mensual por contenido exclusivo (historias, Reels, chats y una insignia). Requisitos según guías que citan la ayuda oficial: cuenta profesional, 18 años y unos **10 000 seguidores**, en un país habilitado. En la ampliación oficial de 2023 Argentina no figuraba, y no encontré confirmación actual. **No verificado para Argentina.** Ojo: **Instagram Plus**, lanzado en 2026 en Argentina, es una suscripción que pagan los **usuarios** por funciones extra; no es una forma de cobrarle a tu audiencia.
 
-**Bonos.** Pagos que Meta ofrece por rendimiento de Reels o por objetivos. Son **solo por invitación** y, según los anuncios de Meta, se ofrecieron en Estados Unidos, Corea del Sur y Japón. No encontré evidencia de que estén disponibles en Argentina. No puedes pedirlos: si te invitan, aparece en tu panel.
+**Bonos.** Pagos de Meta por rendimiento de Reels. Son **solo por invitación** y, según Meta, se ofrecieron en Estados Unidos, Corea del Sur y Japón. No encontré evidencia de que estén en Argentina.
 
-**Contenido de marca y colaboraciones pagadas.** Una marca te paga por promocionar su producto. Meta exige marcar estas publicaciones con la etiqueta **"Colaboración pagada"** (también cuando te pagan con productos). Para usar la herramienta, Meta pide cuenta profesional, presencia auténtica, cumplir sus políticas y residir en un país donde la función esté disponible. El acuerdo con la marca siempre es posible; no encontré una lista oficial de países para la etiqueta, pero es una función muy extendida. Con las **asociaciones publicitarias** (*partnership ads*), la marca además puede pagar anuncios usando tu publicación.
+**Contenido de marca y colaboraciones pagadas.** Una marca te paga por promocionar su producto. Meta exige la etiqueta **"Colaboración pagada"** (también si te pagan con productos), cuenta profesional, presencia auténtica y residir en un país donde la función esté disponible. El acuerdo con la marca siempre es posible; no encontré una lista oficial de países para la etiqueta. Con las **asociaciones publicitarias** (*partnership ads*), la marca puede además pagar anuncios con tu publicación.
 
-**Afiliados.** Recomiendas productos de otros con un enlace personal y cobras comisión por venta. Funciona con plataformas externas en Argentina: **Hotmart** (productos digitales, comisiones normalmente en dólares), el programa de creadores de **Mercado Libre** y programas de afiliados de marcas. Pon el enlace en la bio, en el sticker de enlace de las historias o envíalo por DM.
+**Afiliados.** Recomiendas productos de otros con un enlace personal y cobras comisión por venta. En Argentina funciona con **Hotmart** (comisiones normalmente en dólares), el programa de creadores de **Mercado Libre** y programas de marcas. Pon el enlace en la bio, en historias o envíalo por DM.
 
 **Vender por DM con automatizaciones (ManyChat).** Una **automatización** es un mensaje que se envía solo cuando pasa algo. Ejemplo clásico: en tu Reel dices "comenta GUIA y te la mando por mensaje"; cuando alguien comenta, una herramienta como **ManyChat** le envía el enlace por DM automáticamente. Esto genera conversaciones, que son la antesala de la venta.
 
@@ -289,9 +289,9 @@ Cómo empezar:
 
 Límites: el plan gratuito de ManyChat permite hoy solo **25 contactos activos por mes** (según su página de precios); el plan Essential cuesta unos 14 dólares por mes. Hay alternativas con planes gratis más amplios, pero verifica sus condiciones. Nunca envíes mensajes masivos no pedidos: va contra las reglas de Meta y puede bloquear tu cuenta.
 
-**Hotmart y producto propio.** Puedes crear tu propio producto digital (una guía, un minicurso, plantillas) y venderlo en Hotmart, que se encarga del cobro y la entrega. O vender servicios (asesorías, diseño, clases) cobrando por transferencia o por Mercado Pago. Instagram es ideal para esto: Reels y carruseles atraen, historias generan confianza y los DM cierran la venta.
+**Hotmart y producto propio.** Crea un producto digital (guía, minicurso, plantillas) y véndelo en Hotmart, que cobra y entrega por ti. O vende servicios cobrando por transferencia o Mercado Pago. Reels y carruseles atraen, historias generan confianza y los DM cierran la venta.
 
-**Tienda de Instagram.** Permite mostrar un catálogo y etiquetar productos en publicaciones. Requiere cuenta de empresa, catálogo y aprobación, y solo está disponible en ciertos países. **No pude verificar que esté disponible en Argentina.** Alternativa práctica: una tienda en Tiendanube o una publicación en Mercado Libre, con el enlace en la bio.
+**Tienda de Instagram.** Catálogo y etiquetas de productos en publicaciones. Requiere cuenta de empresa, catálogo, aprobación y país habilitado. **No pude verificar que esté disponible en Argentina.** Alternativa: tienda en Tiendanube o Mercado Libre con el enlace en la bio.
 
 ### Tabla resumen de monetización en Instagram
 
@@ -408,13 +408,13 @@ Cómo revisar:
 1. **Subir Reels con la marca de agua de otra app** (por ejemplo, el logo de TikTok). Instagram prioriza el contenido original. Exporta siempre el archivo limpio desde tu editor.
 2. **Republicar contenido de otros sin transformarlo.** Desde abril de 2026, las cuentas que viven de republicar pueden dejar de ser recomendadas a no seguidores. Poner un borde, una marca o dar crédito en la descripción no alcanza.
 3. **Comprar seguidores o me gusta.** Son cuentas falsas que no interactúan, bajan tus tasas de me gusta y envíos por alcance, y violan las reglas. Además, la monetización exige audiencia "auténtica".
-4. **Usar apps que siguen y dejan de seguir en automático**, o grupos de "me gusta por me gusta".
-5. **Llenar la descripción de hashtags.** Ahora el límite es 5, y nunca fueron la clave del alcance.
-6. **Enviar DM masivos no pedidos** o automatizaciones agresivas. Pueden restringir tu cuenta.
-7. **Usar música con derechos en contenido de marca** o en cuentas de empresa sin licencia: el audio puede silenciarse.
-8. **No usar la etiqueta de colaboración pagada** cuando una marca te paga. Es obligatoria según las políticas de Meta.
-9. **Publicar sin estrategia de historias.** Los Reels atraen, pero las historias venden.
-10. **Abandonar por resultados de las primeras semanas.**
+4. **Apps de seguir y dejar de seguir**, o grupos de "me gusta por me gusta".
+5. **Llenar la descripción de hashtags.** El límite es 5.
+6. **DM masivos no pedidos** o automatizaciones agresivas: pueden restringir tu cuenta.
+7. **Música sin licencia** en contenido de marca: el audio puede silenciarse.
+8. **No usar la etiqueta de colaboración pagada** cuando una marca te paga.
+9. **Olvidar las historias.** Los Reels atraen, pero las historias venden.
+10. **Abandonar en las primeras semanas.**
 
 > **Tarea:** Revisa tus publicaciones y elimina o rehace cualquier contenido con marca de agua o republicado sin aporte propio.
 
@@ -423,8 +423,8 @@ Cómo revisar:
 ## 10. Expectativas realistas
 
 - **No hay ingresos garantizados.** Ninguna estrategia asegura ventas ni seguidores.
-- En Instagram el crecimiento orgánico suele ser más lento que en TikTok, pero los seguidores tienden a estar más dispuestos a comprar, porque la relación se construye con historias y mensajes.
-- Es normal que los primeros Reels tengan pocas visualizaciones. Lo que importa es mejorar mes a mes tus envíos, guardados y alcance a no seguidores.
+- En Instagram el crecimiento orgánico suele ser más lento que en TikTok, pero la relación que se construye con historias y mensajes facilita vender.
+- Es normal que los primeros Reels tengan pocas visualizaciones. Importa mejorar mes a mes envíos, guardados y alcance a no seguidores.
 - Los regalos de Instagram, aunque están disponibles en Argentina, suelen ser un ingreso pequeño. Para la mayoría de las personas que empiezan, el ingreso real viene de servicios, productos propios, afiliados y acuerdos con marcas.
 - Una cuenta chica con un nicho claro puede vender. No necesitas 100 000 seguidores para tener tus primeros clientes; necesitas que las personas correctas confíen en ti.
 - Mide tu progreso en acciones (publicaciones, conversaciones iniciadas, propuestas enviadas) durante los primeros 90 días, no en dinero.

@@ -1,6 +1,6 @@
 # Tu ruta, de cero a tus primeros ingresos
 
-Bienvenido. Este curso está pensado para alguien que nunca tuvo un canal, nunca vendió nada por internet y quiere empezar bien, sin perder meses en errores evitables.
+Te doy la bienvenida. Este curso está pensado para alguien que nunca tuvo un canal, nunca vendió nada por internet y quiere empezar bien, sin perder meses en errores evitables.
 
 Voy a hablarte como un profesor: te explico cada palabra nueva, te doy los pasos en orden y al final de cada etapa te dejo una **tarea**. Puedes marcar las tareas como hechas en esta misma página: se guardan en tu navegador.
 
@@ -34,6 +34,29 @@ La idea central del curso es elegir **un solo nicho** y usarlo en todos lados:
 ```
 
 ¿Por qué un solo nicho? Porque cada video que haces le sirve a las tres redes y a tus ventas al mismo tiempo. Si haces un canal de cocina, una tienda de mascotas y vendes un curso de inglés, tienes que empezar tres veces de cero.
+
+## Los 5 nichos que te recomiendo mirar primero
+
+En el capítulo **Análisis de nichos** están explicados con su puntuación y con cómo se gana plata con cada uno en las cuatro plataformas. En resumen:
+
+1. **Finanzas personales para el día a día en Latinoamérica:** de los que mejor pagan en anuncios, aunque exige mucha responsabilidad con lo que dices.
+2. **IA y herramientas digitales para trabajar mejor:** demanda en crecimiento, buenos productos de afiliado y se puede hacer sin mostrar la cara.
+3. **Inglés práctico para hispanohablantes:** muy bueno para vender tu propio curso, pero necesitas buen nivel de inglés.
+4. **Ejercicio y bienestar en casa:** público enorme y muchos productos en Hotmart.
+5. **Perros: adiestramiento y cuidado:** el que mejor conecta con una tienda de productos físicos.
+
+No es un ranking estricto: las diferencias son de 1 o 2 puntos. Ninguno sirve si no te interesa, porque vas a hablar de ese tema cientos de veces. Usa la tabla de puntuación del capítulo para decidir.
+
+## Datos clave verificados al 28 de noviembre de 2026
+
+| Plataforma | Lo que tienes que saber |
+|---|---|
+| YouTube | Para cobrar por anuncios hoy se piden 1000 suscriptores y 4000 horas vistas en 12 meses (o 10 millones de vistas en Shorts en 90 días). YouTube anunció que **desde el 1 de febrero de 2027** quien se postule por primera vez necesitará **8000 horas** (o 20 millones de vistas en Shorts). Con 500 suscriptores ya hay funciones para ganar plata (membresías, Super Thanks, Shopping), pero sin anuncios. |
+| TikTok | El programa que paga por vistas (Creator Rewards) **no está disponible en Argentina**; en Latinoamérica solo en México y Brasil. En Argentina se gana con regalos en vivos, marcas, afiliados y productos propios. |
+| Hotmart | Cobra 9,9 % + 1 dólar por venta. El dinero queda disponible a los 15 días y el retiro mínimo es de 50 dólares. |
+| Shopify | Su sistema de pagos propio **no funciona en Argentina**: se cobra con Mercado Pago o PayPal, y Shopify suma un 2 % extra en el plan Basic. |
+
+Estos datos cambian seguido. Cada capítulo cita sus fuentes para que puedas revisarlos.
 
 ## Las cuatro fases
 

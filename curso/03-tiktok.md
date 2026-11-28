@@ -73,10 +73,9 @@ TikTok tiene dos tipos de cuenta. Hace unos años existía una tercera ("creador
 
 El **nombre de usuario** es tu @, la dirección única de tu cuenta. Puede cambiarse, pero con límites de tiempo entre cambios, así que piénsalo bien.
 
-- Corto y fácil de dictar en voz alta.
-- Sin números al azar ni muchos guiones bajos (evita "@laura_9876__").
+- Corto, fácil de dictar y sin números al azar (evita "@laura_9876__").
 - Si puedes, que indique el tema: "@finanzasconlu", "@cocinafacilar".
-- Busca que el mismo @ esté libre en Instagram. Así la gente te encuentra igual en las dos redes.
+- Que esté libre también en Instagram, para que te encuentren igual en las dos redes.
 
 El **nombre visible** (el que aparece en grande) puede llevar una palabra clave. Por ejemplo: "Lu | Finanzas personales". Esto ayuda en la búsqueda.
 
@@ -131,13 +130,12 @@ Es el formato principal. Un **video corto** es un video vertical (formato 9:16, 
 Cómo hacerlo:
 
 1. Escribe el guion (sección 4).
-2. Graba con la cámara trasera si puedes (tiene mejor calidad), frente a una ventana para tener luz natural.
-3. Usa un micrófono barato de solapa o grábate en un lugar sin eco. El audio malo hace que la gente se vaya más que la imagen mala.
-4. Edita cortando todos los silencios.
-5. Agrega subtítulos: mucha gente mira sin sonido.
-6. Publica desde la app de TikTok con una descripción que incluya palabras clave.
+2. Graba frente a una ventana (luz natural), con la cámara trasera si puedes.
+3. Cuida el audio: un micrófono de solapa barato o un lugar sin eco. El audio malo espanta más que la imagen mala.
+4. Edita cortando los silencios y agrega subtítulos (mucha gente mira sin sonido).
+5. Publica con una descripción que incluya palabras clave.
 
-Tipos de video corto que funcionan bien para principiantes: tutorial ("cómo hacer X en 3 pasos"), lista ("3 errores que..."), antes y después, opinión sobre un tema de tu nicho, respuesta a un comentario, y "un día de mi trabajo".
+Tipos que funcionan para principiantes: tutorial ("cómo hacer X en 3 pasos"), lista ("3 errores que..."), antes y después, opinión, respuesta a un comentario y "un día de mi trabajo".
 
 ### Carruseles de fotos
 
@@ -401,13 +399,9 @@ Las estadísticas están en **TikTok Studio > Estadísticas**. Para cada video p
 | Seguidores nuevos por video | Cuánta gente te siguió desde ese video | Indica si el video representa bien lo que ofreces. |
 | Actividad de seguidores | Horas y días en que están conectados | Para elegir horarios. |
 
-Cómo revisar sin volverte loco:
+Espera 48 a 72 horas antes de juzgar un video y compara tus videos entre sí, no con cuentas grandes.
 
-1. Espera 48 a 72 horas antes de juzgar un video.
-2. Compara tus videos entre sí, no con cuentas grandes.
-3. Una vez por semana anota en una planilla: tema, gancho, duración, % que vio completo, compartidos, seguidores nuevos.
-
-> **Tarea:** Crea una planilla con esas columnas y carga todos tus videos de la primera semana.
+> **Tarea:** Crea una planilla con columnas de tema, gancho, duración, % que vio completo, compartidos y seguidores nuevos. Cárgala cada semana.
 
 ---
 

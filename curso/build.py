@@ -46,6 +46,7 @@ def render(slug: str, text: str):
     title = title_m.group(1) if title_m else slug
     body = re.sub(r"<h1[^>]*>.*?</h1>", "", body, count=1, flags=re.S)
     body = body.replace("<table>", '<div class="tw"><table>').replace("</table>", "</table></div>")
+    body = re.sub(r'(?<![">=])(https?://[^\s<>"]+[^\s<>".,;:)])', r'<a href="\1">\1</a>', body)
     body = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', body)
     n = 0
 
@@ -57,8 +58,7 @@ def render(slug: str, text: str):
                 f'<div class="task-body"><span class="task-k">Tarea</span><p>{m.group(1).strip()}</div></div>')
 
     body = re.sub(r"<blockquote>\s*<p><strong>Tarea:?</strong>:?(.*?)</blockquote>", task, body, flags=re.S)
-    toc = [{"id": t["id"], "name": html.unescape(t["name"])} for h1 in md.toc_tokens for t in h1.get("children", [])] \
-        or [{"id": t["id"], "name": html.unescape(t["name"])} for t in md.toc_tokens if t["level"] == 2]
+    toc = [{"id": t["id"], "name": html.unescape(t["name"])} for t in md.toc_tokens if t["level"] == 2]
     words = len(re.sub(r"<[^>]+>", " ", body).split())
     return title, body, toc, n, words
 
